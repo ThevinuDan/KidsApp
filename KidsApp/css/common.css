@@ -11,22 +11,21 @@
 --lavender:hsl(245, 62%, 66%);
 }
 
-
 @font-face {
   font-family: 'heading'; /* Specify your custom font family name */
-  src: url('/fonts/Comicy.woff2') format('woff2')
+  src: url('/KidsApp/fonts/Comicy.woff2') format('woff2')
   /* Add additional formats if needed (e.g., ttf, otf) */
 }
 
 @font-face {
   font-family: 'subheading'; /* Specify your custom font family name */
-  src: url('/fonts/TarifArabic-Bold.woff2') format('woff2')
+  src: url('/KidsApp/fonts/TarifArabic-Bold.woff2') format('woff2')
   /* Add additional formats if needed (e.g., ttf, otf) */
 }
 
 @font-face {
   font-family: 'content'; /* Specify your custom font family name */
-  src: url('/fonts/TarifArabic-Regular.woff2') format('woff2')
+  src: url('/KidsApp/fonts/TarifArabic-Regular.woff2') format('woff2')
   /* Add additional formats if needed (e.g., ttf, otf) */
 }
 body {
@@ -84,7 +83,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image:  linear-gradient(135deg, var(--sunset) 25%, transparent 25%), linear-gradient(225deg, var(--melon) 25%, transparent 25%), linear-gradient(45deg, var(--tea-green) 25%, transparent 25%), linear-gradient(315deg, var(--jordy-blue) 25%, var(--periwinkle) 25%);
+  background-image:  var(--baby-powder);
   background-position:  12px 0, 12px 0, 0 0, 0 0;
   background-size: 24px 24px;
   background-repeat: repeat;
