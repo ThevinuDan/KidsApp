@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Puzzle container */
+    #puzzleContainer {
+      width: 500px;
+      color: #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Puzzle */
+    #piecesContainer {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allow pieces to wrap to the next line */
+      gap: 0;
+      /* Remove the gap between pieces */
+    }
+
+    .boardPieceContainer {
+      width: 50%;
+      /* Each board piece takes 50% of the container width */
+      height: 200px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      /* Include border in width and height */
+    }
+
+    #puzzleContainer img {
+      width: 100%;
+      /* Each image takes 100% of its container's width */
+      height: 100%;
+      /* Each image takes 100% of its container's height */
+      object-fit: contain;
+    }
+
+    #board {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allow board pieces to wrap to the next line */
+      gap: 0;
+      /* Remove the gap between board pieces */
+    }
+
+    #winMessage {
+      background-color: #fff;
+      padding: 20px;
+      border: 2px solid #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <script>
+    /**
+   * Function executed when dragging the element.
+   **/
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+    function start(e) {
+      e.dataTransfer.effectAllowed = 'move'; // Set the effect to move (default)
+      e.dataTransfer.setData("Text", e.target.id); // Get the element to be moved
+      e.target.style.opacity = '0.4';
+
+    }
+
+    /**
+     * Function executed when the dragging of the element is finished.
+     **/
+    function end(e) {
+      e.target.style.opacity = ''; // Restore the element's opacity
+      e.dataTransfer.clearData("Data");
+    }
+
+    /**
+     * Function executed when a draggable element enters the calling element.
+     **/
+    function enter(e) {
+      return true;
+    }
+
+    /**
+     * Function executed when a draggable element is over the calling element.
+     * Returns false if the object can be dropped in that element, and true otherwise.
+     **/
+    function over(e) {
+      if ((e.target.className == "boardPieceContainer") || (e.target.id == "piecesContainer"))
+        return false;
+      else
+        return true;
+    }
+
+    /**
+     * Function executed when a draggable element is dropped on the calling element.
+     **/
+    function drop(e) {
+      e.preventDefault(); // Prevent the default action of the dropped element.
+      var draggedElement = e.dataTransfer.getData("Text");
+      e.target.appendChild(document.getElementById(draggedElement)); // Place the dropped element on the calling element
+      checkPuzzle();
+    }
+
+    function checkPuzzle() {
+      if (
+        (document.getElementById('piece1').parentNode.id == 'one') &&
+        (document.getElementById('piece2').parentNode.id == 'two') &&
+        (document.getElementById('piece3').parentNode.id == 'three') &&
+        (document.getElementById('piece4').parentNode.id == 'four')
+      ) {
+        // Create a div element for the win message
+        var winMessage = document.createElement("div");
+        winMessage.id = "winMessage";
+        winMessage.innerHTML = "Congratulations, you have completed the puzzle!";
+
+        // Append the win message to the puzzle container
+        document.getElementById("puzzleContainer").appendChild(winMessage);
+      }
+    }
+
+
+    /**
+     * Displays a warning message if the browser does not support Drag & Drop. (Not supported by IE or Safari on Windows)
+     **/
+    function checkBrowser() {
+      if (
+        (navigator.userAgent.toLowerCase().indexOf('msie ') > -1) ||
+        ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.userAgent.toLowerCase().indexOf('chrome') == -1))
+      ) {
+        alert("Your browser does not correctly support HTML5 Drag & Drop functions. Please try another browser.");
+      }
+    }
+
+    function resetPuzzle() {
+      // Remove the win message if it exists
+      var winMessage = document.getElementById("winMessage");
+      if (winMessage) {
+        winMessage.parentNode.removeChild(winMessage);
+      }
+
+      // Reset the puzzle piece positions
+      var pieces = document.querySelectorAll(".boardPieceContainer img");
+      var puzzleContainer = document.getElementById("piecesContainer");
+
+      // Shuffle the pieces randomly
+      pieces = Array.from(pieces);
+      shuffleArray(pieces);
+
+      // Move each piece back to the original container
+      pieces.forEach(function (piece) {
+        puzzleContainer.appendChild(piece);
+      });
+    }
+
+  </script>
+</head>
+
+<body onload="checkBrowser();">
+  <section id="puzzleContainer">
+    <div id="piecesContainer" ondragenter="return enter(event)" ondragover="return over(event)"
+      ondrop="return drop(event)">
+      <img id="piece3" src="https://1.bp.blogspot.com/-8LurPyhzlD4/USVEdAH-KJI/AAAAAAAAA54/INQRSWmH79k/s320/piece3.jpg"
+        alt="piece3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      <img id="piece2" src="https://1.bp.blogspot.com/-daD5d1V4ct4/USVEdAGqdDI/AAAAAAAAA50/XXo8rBlTGpQ/s320/piece2.jpg"
+        alt="piece2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      <img id="piece4" src="https://4.bp.blogspot.com/-2R3yc2Kggvo/USVEd9UUR5I/AAAAAAAAA6A/YBxpgYG15NI/s320/piece4.jpg"
+        alt="piece4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      <img id="piece1" src="https://3.bp.blogspot.com/-gA3KvKhA-8w/USVEdAiWi6I/AAAAAAAAA58/btNKJqIkXHc/s320/piece1.jpg"
+        alt="piece1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+    </div>
+    <div id="board">
+      <div class="boardPieceContainer" id="one" ondragenter="return enter(event)" ondragover="return over(event)"
+        ondrop="return drop(event)"></div>
+      <div class="boardPieceContainer" id="two" ondragenter="return enter(event)" ondragover="return over(event)"
+        ondrop="return drop(event)"></div>
+      <div class="boardPieceContainer" id="three" ondragenter="return enter(event)" ondragover="return over(event)"
+        ondrop="return drop(event)"></div>
+      <div class="boardPieceContainer" id="four" ondragenter="return enter(event)" ondragover="return over(event)"
+        ondrop="return drop(event)"></div>
+    </div>
+  </section>
+  <button onclick="resetPuzzle()">Reset Puzzle</button>
+</body>
+
+</html>
