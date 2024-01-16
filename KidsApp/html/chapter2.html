@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script src="/js/common.js" defer></script>
+  <script src="/js/chapter2.js" defer></script>
+  <script src="/js/puzzle.js" defer></script>
+  <script src="/js/confettii.js" defer></script>
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/buttons.css">
+  <link rel="stylesheet" href="/css/chapter1.css">
+  <title>Chapter 2</title>
+</head>
+
+<body>
+
+  <div class="page" id="page1">
+    <div class="background-container" id="color1"></div>
+    <h1>How a computer works</h1>
+    <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page2">
+    <div class="background-container" id="color2"></div>
+    <h2>Introduction</h2>
+    <p>
+      In this chapter, we'll explore what computers are, and the amazing tasks they can do. We'll peek
+      inside their special parts, understand how they follow instructions, and see how they become really helpful in our
+      daily lives. Join us as we unveil the magic that makes computers important in our world!
+    </p>
+    <button onclick="playClickSound(),changePage(1)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),changePage(3)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page3">
+    <div class="background-container" id="color2"></div>
+    <h2>What is a computer?</h2>
+    <p>
+      A computer is a machine that helps us to solve problems and do tasks in a step by step order. The computer can
+      help you do amazing things, as long as you tell the computer exactly what you want to do. You give the computer
+      these steps with your keyboard, mouse, and microphone, and the computer will follow the steps and answer back to
+      you with the monitor or the speaker.
+    </p>
+    <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),changePage(4)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page4">
+    <div class="background-container" id="color2"></div>
+    <h2>Hardware</h2>
+    <p>
+      Hardware is all the parts of the computer. Some parts you can see and touch like the screen, keyboard, and mouse.
+      Some parts are Inside the computer like the CPU, the wires, and a tiny microphone that listens. Together, they
+      make your computer work and do cool things, and all of these parts are called hardware.
+    </p>
+    <button onclick="playClickSound(),changePage(3)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),changePage(5)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page5">
+    <div class="background-container" id="color2"></div>
+    <h2>Software</h2>
+    <p>
+      Software is a set of rules and steps for your computer. Think of it as a story that your computer
+      follows to do amazing things. When your teacher tells you a story, you can't touch it, but you understand it,
+      learn it, and imagine it. Like that, software is like a story of instructions, helping your computer to be a
+      helpful friend.
+    </p>
+    <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),changePage(4)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page6">
+    <div class="background-container" id="color2"></div>
+    <h2>CPU</h2>
+    <p>
+
+    </p>
+    <button onclick="playClickSound(),changePage(5)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+
+  <div class="page" id="page7">
+    <div class="background-container" id="color2"></div>
+    <h2>Code</h2>
+    <p>
+
+    </p>
+    <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),changePage(8)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page7">
+    <div class="background-container" id="color2"></div>
+    <h1>The End!</h1>
+    <p>
+      Awsome Job little computer heroes! now you know how a computer works and how a computer thinks and how the
+      computer understands you. Now let's dive in to the world of code
+    </p>
+    <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),changePage(8)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a onclick="goToChapter('home')" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+</body>
+
+</html>
