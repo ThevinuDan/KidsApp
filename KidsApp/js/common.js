@@ -8,7 +8,7 @@ function changePage(page) {
 }
 
 function goToChapter(chapter) {
-  window.location.href = chapter + ".html";
+  window.location.href = "KidsApp/html/" + chapter + ".html";
 }
 document.getElementById("page1").style.display = "flex";
 
