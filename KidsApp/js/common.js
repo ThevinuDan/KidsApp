@@ -12,7 +12,7 @@ function goToChapter(chapter) {
 }
 
 function goToHome() {
-  window.location.href = "index.html";
+  window.location.href = "/index.html";
 }
 document.getElementById("page1").style.display = "flex";
 
@@ -37,4 +37,38 @@ function playClickSound() {
 
 function playVictorySound() {
   victorySound.play();
+}
+// Add this function to your JavaScript
+function speakAllParagraphs(page) {
+  // Get all <p> elements within the current page
+  var paragraphs = document
+    .getElementById("page" + page)
+    .getElementsByTagName("p");
+
+  // Iterate through each <p> tag
+  Array.from(paragraphs).forEach(function (paragraph, index) {
+    // Speak the text of the paragraph
+    var text = paragraph.innerText;
+
+    // Create a new SpeechSynthesisUtterance
+    var utterance = new SpeechSynthesisUtterance();
+    utterance.text = text;
+
+    // Find the voice by name
+    const voices = speechSynthesis.getVoices();
+    const targetVoice = voices.find(
+      (voice) =>
+        voice.name === "Microsoft Emily Online (Natural) - English (Ireland)"
+    );
+
+    if (targetVoice) {
+      utterance.voice = targetVoice;
+    } else {
+      // Fallback: if the target voice is not available, use default voice
+      utterance.voice = voices[0];
+    }
+
+    // Play the synthesized speech
+    speechSynthesis.speak(utterance);
+  });
 }
