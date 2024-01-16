@@ -1,0 +1,122 @@
+/* Puzzle container */
+#puzzleContainer {
+  width: 700px;
+  color: #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin:0px auto;
+  position: relative;
+}
+
+/* Puzzle */
+#pieceContainer {
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-left: 10px;
+  border:0.5px var(--lavender) dotted;
+}
+
+.pieceContainer {
+  width: 148.2px;
+  height: 148.2px;
+  float: left;
+  border:0.25px var(--lavender) dotted;
+}
+
+#puzzleContainer img {
+  float: left;
+  padding: 10px;
+  width: 130px;
+  height: 130px;
+}
+
+#puzzle {
+  width: 300px;
+  height: 300px;
+  float: right;
+  margin-right: 10px;
+}
+
+#puzzle img {
+  width: 150px;
+  height: 150px;
+  padding: 0;
+}
+
+#winMessage {
+  position: absolute;
+  top:40%;
+  left: 27%;
+  font-size: 1rem;
+  transform: translateX(-50%);
+  font-family: 'heading';
+  background-color: var(--lavender);
+  color: var(--baby-powder);
+  padding: 20px;
+  border: 3px solid;
+  border-image: linear-gradient(
+    to left,
+    var(--melon) 0%,       /* Melon color */
+    var(--sunset) 12.5%,   /* Sunset color */
+    var(--cream) 25%,      /* Cream color */
+    var(--tea-green) 37.5%,/* Tea Green color */
+    var(--electric-blue) 50%,  /* Electric Blue color */
+    var(--jordy-blue) 62.5%,   /* Jordy Blue color */
+    var(--periwinkle) 75%,     /* Periwinkle color */
+    var(--mauve) 87.5%         /* Mauve color */
+  );
+  border-image-slice: 1;
+}
+
+
+#resetButton {
+  margin: 20px auto;
+  /* Center horizontally with auto margins */
+}
+#rangeValue{
+  font-family: 'heading';
+  color: var(--lavender);
+  font-size: 2rem;
+}
+.range {
+  width: 400px;
+  height: 15px;
+  -webkit-appearance: none;
+  background: var(--baby-powder);
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--lavender);
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--lavender); /* Set border to transparent */
+  box-shadow: -407px 0 0 400px var(--lavender);
+}
+
+#waveform{
+  margin: 10px;
+}
+
+#Emily {
+  position: relative;
+  height: 250px;
+  width: 250px;
+}
+
+#Emily img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
