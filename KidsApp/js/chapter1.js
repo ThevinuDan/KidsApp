@@ -23,6 +23,20 @@ document.getElementById("violet-btn").addEventListener("click", function () {
 document.getElementById("pink-btn").addEventListener("click", function () {
   document.getElementById("page5").style.backgroundColor = "#ffc6ff";
 });
+
+document.addEventListener("keydown", function (event) {
+  // Check if the pressed key is a letter (A-Z)
+  if (event.key.match(/^[a-zA-Z]$/)) {
+    // Get the image URL for the corresponding letter
+    var imageUrl = "/KidsApp/img/" + event.key.toUpperCase() + ".png";
+
+    // Update the imageContainer with the new image
+    document.getElementById(
+      "alphabetImg"
+    ).innerHTML = `<img src="${imageUrl}" alt="${event.key.toUpperCase()} letter image">`;
+  }
+});
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
