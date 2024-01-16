@@ -8,8 +8,9 @@ function changePage(page) {
 }
 
 function goToChapter(chapter) {
-  window.location.href = "KidsApp/html/" + chapter + ".html";
+  window.location.href = "/KidsApp/html/" + chapter + ".html";
 }
+
 function goToHome() {
   window.location.href = "index.html";
 }
@@ -19,14 +20,14 @@ document.getElementById("page1").style.display = "flex";
 var clickSound = document.createElement("audio");
 clickSound.id = "clickSound";
 clickSound.innerHTML =
-  '<source src="/audio/click.mp3" type="audio/mp3"> Your browser does not support the audio element.';
+  '<source src="/KidsApp/audio/click.mp3" type="audio/mp3"> Your browser does not support the audio element.';
 document.body.appendChild(clickSound);
 clickSound.volume = 0.2;
 
 var victorySound = document.createElement("audio");
 victorySound.id = "victorySound";
 victorySound.innerHTML =
-  '<source src="/audio/victory.mp3" type="audio/mp3"> Your browser does not support the audio element.';
+  '<source src="/KidsApp/audio/victory.mp3" type="audio/mp3"> Your browser does not support the audio element.';
 document.body.appendChild(victorySound);
 victorySound.volume = 0.5; // Adjust the volume as needed
 
