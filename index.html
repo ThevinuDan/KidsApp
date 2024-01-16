@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/KidsApp/img/favicon.png" type="image/png">
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-  <script src="/js/common.js" defer></script>
-  <script src="/js/chapter2.js" defer></script>
-  <script src="/js/puzzle.js" defer></script>
-  <script src="/js/confettii.js" defer></script>
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/buttons.css">
-  <link rel="stylesheet" href="/css/chapter1.css">
-  <title>Toddler Computing Adventures</title>
+  <script src="KidsApp/js/common.js" defer></script>
+  <script src="KidsApp/js/confettii.js" defer></script>
+  <link rel="stylesheet" href="KidsApp/css/common.css">
+  <link rel="stylesheet" href="KidsApp/css/buttons.css">
+  <title>Home</title>
   <style>
     h1 {
       text-shadow: -1px -1px 0 var(--lavender), 1px -1px 0 var(--lavender), -1px 1px 0 var(--lavender), 1px 1px 0 var(--lavender)
@@ -65,7 +64,6 @@
 </head>
 
 <body>
-
   <div class="page" id="page1">
     <h1 style="margin-bottom: 0;">
       <span style="color:var(--melon);">K</span>
@@ -108,21 +106,21 @@
       </button>
     </div>
     <div>
-      <button onclick="playClickSound(),goToChapter('')" id="yellow-btn" class="pushable">
+      <button onclick="playClickSound(),goToChapter('guide')" id="yellow-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="rainbow-btn-edge"></span>
         <span class="front" id="yellow-btn-front">
           <span style="font-family: 'subheading';">Guide</span>
         </span>
       </button>
-      <button onclick="playClickSound(),goToChapter('')" id="green-btn" class="pushable">
+      <button onclick="playClickSound(),goToChapter('CodeLab')" id="green-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="rainbow-btn-edge"></span>
         <span class="front" id="green-btn-front">
           <span style="font-family: 'subheading';">CodeLab</span>
         </span>
       </button>
-      <button onclick="playClickSound(),goToChapter('')" id="blue-btn" class="pushable">
+      <button onclick="playClickSound(),goToChapter('Emily')" id="blue-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="rainbow-btn-edge"></span>
         <span class="front" id="blue-btn-front">
@@ -185,6 +183,7 @@
       </div>
     </div>
   </div>
+
   <script>
     // Get the modal
     var modal = document.getElementById('id01');
