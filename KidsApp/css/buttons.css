@@ -1,0 +1,245 @@
+button{
+  width: 150px;
+  margin-bottom: 10px;
+  font-family: 'content';
+}
+
+.pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+}
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  border: 2px solid var(--lavender);
+  color: var(--lavender);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+#red-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(0deg 100% 75%) 0%,      /* Light shade of red */
+    hsl(0deg 100% 65%) 8%,      /* Medium light shade of red */
+    hsl(0deg 100% 65%) 92%,     /* Medium light shade of red */
+    hsl(0deg 100% 75%) 100%     /* Light shade of red */
+  );
+}
+
+#red-btn-front {
+  background: hsl(0deg 100% 80%); /* Lightest shade of red */
+}
+
+#orange-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(30deg 100% 75%) 0%,      /* Light shade of orange */
+    hsl(30deg 100% 65%) 8%,      /* Medium light shade of orange */
+    hsl(30deg 100% 65%) 92%,     /* Medium light shade of orange */
+    hsl(30deg 100% 75%) 100%     /* Light shade of orange */
+  );
+}
+
+#orange-btn-front {
+  background: hsl(30deg 100% 80%); /* Lightest shade of orange */
+}
+
+#yellow-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(60deg 100% 85%) 0%,      /* Light shade of orange */
+    hsl(60deg 100% 75%) 8%,      /* Medium light shade of orange */
+    hsl(60deg 100% 75%) 92%,     /* Medium light shade of orange */
+    hsl(60deg 100% 85%) 100%     /* Light shade of orange */
+  );
+}
+
+#yellow-btn-front {
+  background: hsl(60deg 100% 90%); /* Lightest shade of orange */
+}
+
+#green-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(150deg 100% 85%) 0%,      /* Light shade of green */
+    hsl(150deg 100% 75%) 8%,      /* Medium light shade of green */
+    hsl(150deg 100% 75%) 92%,     /* Medium light shade of green */
+    hsl(150deg 100% 85%) 100%     /* Light shade of green */
+  );
+}
+
+#green-btn-front {
+  background: hsl(150deg 100% 90%); /* Lightest shade of green */
+}
+
+#blue-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(200deg 100% 85%) 0%,      /* Light shade of blue */
+    hsl(200deg 100% 75%) 8%,      /* Medium light shade of blue */
+    hsl(200deg 100% 75%) 92%,     /* Medium light shade of blue */
+    hsl(200deg 100% 85%) 100%     /* Light shade of blue */
+  );
+}
+
+#blue-btn-front {
+  background: hsl(200deg 100% 90%); /* Lightest shade of blue */
+}
+
+#indigo-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(220deg 100% 85%) 0%,      /* Light shade of indigo */
+    hsl(220deg 100% 75%) 8%,      /* Medium light shade of indigo */
+    hsl(220deg 100% 75%) 92%,     /* Medium light shade of indigo */
+    hsl(220deg 100% 85%) 100%     /* Light shade of indigo */
+  );
+}
+
+#indigo-btn-front {
+  background: hsl(220deg 100% 90%); /* Lightest shade of indigo */
+}
+
+#violet-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(260deg 100% 85%) 0%,      /* Light shade of violet */
+    hsl(260deg 100% 75%) 8%,      /* Medium light shade of violet */
+    hsl(260deg 100% 75%) 92%,     /* Medium light shade of violet */
+    hsl(260deg 100% 85%) 100%     /* Light shade of violet */
+  );
+}
+
+#violet-btn-front {
+  background: hsl(260deg 100% 90%); /* Lightest shade of violet */
+}
+
+#pink-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(320deg 100% 85%) 0%,      /* Light shade of pink */
+    hsl(320deg 100% 75%) 8%,      /* Medium light shade of pink */
+    hsl(320deg 100% 75%) 92%,     /* Medium light shade of pink */
+    hsl(320deg 100% 85%) 100%     /* Light shade of pink */
+  );
+}
+
+#pink-btn-front {
+  background: hsl(320deg 100% 90%); /* Lightest shade of pink */
+}
+
+#lavender-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(250deg 100% 75%) 0%,      /* Light shade of Royal Lavender */
+    hsl(250deg 100% 65%) 8%,      /* Medium light shade of Royal Lavender */
+    hsl(250deg 100% 65%) 92%,     /* Medium light shade of Royal Lavender */
+    hsl(250deg 100% 75%) 100%     /* Light shade of Royal Lavender */
+  );
+}
+
+#lavender-btn-front {
+  color: var(--baby-powder);
+  text-shadow: none;
+  font-weight:900;
+  background: hsl(250deg 100% 80%); /* Lightest shade of Royal Lavender */
+}
+#rainbow-btn-edge {
+  background: linear-gradient(
+    to left,
+    var(--melon) 0%,       /* Melon color */
+    var(--sunset) 12.5%,   /* Sunset color */
+    var(--cream) 25%,      /* Cream color */
+    var(--tea-green) 37.5%,/* Tea Green color */
+    var(--electric-blue) 50%,  /* Electric Blue color */
+    var(--jordy-blue) 62.5%,   /* Jordy Blue color */
+    var(--periwinkle) 75%,     /* Periwinkle color */
+    var(--mauve) 87.5%         /* Mauve color */
+  );
+}
+
+#rainbow-btn-front {
+  color: var(--lavender);
+  border:2px solid var(--lavender);
+  background: var(--baby-powder); /* Lightest shade */
+}
+
+#emoji-btn-edge {
+  background: linear-gradient(
+    to left,
+    hsl(50deg 100% 75%) 0%,      /* Light shade of yellow */
+    hsl(50deg 100% 65%) 8%,      /* Medium light shade of yellow */
+    hsl(50deg 100% 65%) 92%,     /* Medium light shade of yellow */
+    hsl(50deg 100% 75%) 100%     /* Light shade of yellow */
+  );
+}
+
+#emoji-btn-front {
+  background: hsl(50deg 100% 80%); /* Lightest shade of yellow */
+}
