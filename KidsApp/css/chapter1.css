@@ -1,4 +1,12 @@
+#alphabetImg{
+  z-index: 1;
+}#alphabetImg img{
+  width: 300px;
+  margin-bottom: 10px;
+}
+
 /* Puzzle container */
+
 #puzzleContainer {
   width: 700px;
   color: #ccc;
