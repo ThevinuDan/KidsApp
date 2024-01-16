@@ -152,6 +152,7 @@ p{
 .img-wrapper {
   position: relative;
   margin: 20px 10px;
+  border: 1px solid var(--lavender);
 }
 
 .img-wrapper img {
@@ -169,6 +170,8 @@ p{
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--baby-powder);
+  border: 1px solid var(--lavender);
+  border-bottom: none;
   padding: 5px;
   text-align: center;
 }
