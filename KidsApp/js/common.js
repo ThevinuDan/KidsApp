@@ -1,3 +1,22 @@
+function preloadFonts() {
+  var fontNames = [
+    "Comicy.woff2",
+    "MaryKate.woff2",
+    "TarifArabic-Bold.woff2",
+    "TarifArabic-Regular.woff2",
+  ];
+
+  for (var i = 0; i < fontNames.length; i++) {
+    var font = new FontFace(
+      "CustomFont",
+      `url('/KidsApp/fonts/${fontNames[i]}')`,
+      {}
+    );
+    document.fonts.add(font);
+  }
+}
+preloadFonts();
+
 //page navigation script
 var currentPage = 1;
 
