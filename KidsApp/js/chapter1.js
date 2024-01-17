@@ -1,3 +1,41 @@
+// Array to store preloaded Image objects
+var preloadedImages = [];
+
+// Function to preload images
+function preloadImages() {
+  var imageNames = [
+    "desktop keyboard.jpg",
+    "desktop microphone.jpg",
+    "desktop monitor.jpeg",
+    "desktop mouse.png",
+    "desktop speaker.jpg",
+    "touch keyboard.jpg",
+    "portable speaker.png",
+    "laptop microphone.jpeg",
+    "laptop monitor.jpeg",
+    "laptop mouse.jpeg",
+  ];
+
+  for (var i = 65; i <= 90; i++) {
+    // ASCII values for A-Z
+    var letter = String.fromCharCode(i);
+    var imageUrl = "/KidsApp/img/" + letter + ".png";
+
+    var img = new Image();
+    img.src = imageUrl;
+
+    preloadedImages.push(img);
+  }
+
+  // Adding additional images to the preloadedImages array
+  for (var j = 0; j < imageNames.length; j++) {
+    var additionalImg = new Image();
+    additionalImg.src = "/KidsApp/img/" + imageNames[j];
+    preloadedImages.push(additionalImg);
+  }
+}
+preloadImages();
+
 //button and background change
 document.getElementById("red-btn").addEventListener("click", function () {
   document.getElementById("page5").style.backgroundColor = "#ffadad";
@@ -24,24 +62,6 @@ document.getElementById("pink-btn").addEventListener("click", function () {
   document.getElementById("page5").style.backgroundColor = "#ffc6ff";
 });
 
-var preloadedImages = [];
-
-// Function to preload images
-function preloadImages() {
-  for (var i = 65; i <= 90; i++) {
-    // ASCII values for A-Z
-    var letter = String.fromCharCode(i);
-    var imageUrl = "/KidsApp/img/" + letter + ".png";
-
-    var img = new Image();
-    img.src = imageUrl;
-
-    preloadedImages.push(img);
-  }
-}
-
-// Call the function to preload images
-preloadImages();
 document.addEventListener("keydown", function (event) {
   // Check if the pressed key is a letter (A-Z)
   if (event.key.match(/^[a-zA-Z]$/)) {
