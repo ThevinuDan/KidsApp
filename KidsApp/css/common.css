@@ -158,10 +158,11 @@ p{
 .img-wrapper img {
   display: block;
   max-width: 400px;
-  height: auto;
+  height: 307px;
   background-color: var(--baby-powder);
   border: 10px solid var(--baby-powder);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  object-fit: contain; 
 }
 
 .img-text {
