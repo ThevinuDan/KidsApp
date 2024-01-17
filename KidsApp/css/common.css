@@ -90,30 +90,36 @@ body {
   opacity: 0.3;
 }
 
-#color1{
-  background-image:  linear-gradient(135deg, var(--melon) 25%, transparent 25%), linear-gradient(225deg, var(--melon) 25%, transparent 25%), linear-gradient(45deg, var(--melon) 25%, transparent 25%), linear-gradient(315deg, var(--melon) 25%, var(--electric-blue) 25%);
+#color1 {
+  background-image: linear-gradient(135deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(225deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(45deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(315deg, var(--electric-blue) 25%, var(--mauve) 25%);
 }
 
-#color2{
-  background-image:  linear-gradient(135deg, var(--sunset) 25%, transparent 25%), linear-gradient(225deg, var(--sunset) 25%, transparent 25%), linear-gradient(45deg, var(--sunset) 25%, transparent 25%), linear-gradient(315deg, var(--sunset) 25%, var(--periwinkle) 25%);
+#color2 {
+  background-image: linear-gradient(135deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(225deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(45deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(315deg, var(--periwinkle) 25%, var(--sunset) 25%);
 }
-#color3{
-  background-image:  linear-gradient(135deg, var(--cream) 25%, transparent 25%), linear-gradient(225deg, var(--cream) 25%, transparent 25%), linear-gradient(45deg, var(--cream) 25%, transparent 25%), linear-gradient(315deg, var(--cream) 25%, var(--jordy-blue) 25%);
+
+#color3 {
+  background-image: linear-gradient(135deg, var(--sunset) 25%, transparent 25%), linear-gradient(225deg, var(--sunset) 25%, transparent 25%), linear-gradient(45deg, var(--sunset) 25%, transparent 25%), linear-gradient(315deg, var(--sunset) 25%, var(--periwinkle) 25%);
 }
-#color4{
-  background-image:  linear-gradient(135deg, var(--tea-green) 25%, transparent 25%), linear-gradient(225deg, var(--tea-green) 25%, transparent 25%), linear-gradient(45deg, var(--tea-green) 25%, transparent 25%), linear-gradient(315deg, var(--tea-green) 25%, var(--melon) 25%);
+
+#color4 {
+  background-image: linear-gradient(135deg, var(--mauve) 25%, transparent 25%), linear-gradient(225deg, var(--mauve) 25%, transparent 25%), linear-gradient(45deg, var(--mauve) 25%, transparent 25%), linear-gradient(315deg, var(--mauve) 25%, var(--tea-green) 25%);
 }
-#color5{
-  background-image:  linear-gradient(135deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(225deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(45deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(315deg, var(--electric-blue) 25%, var(--mauve) 25%);
+
+#color5 {
+  background-image: linear-gradient(135deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(225deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(45deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(315deg, var(--jordy-blue) 25%, var(--cream) 25%);
 }
-#color6{
-  background-image:  linear-gradient(135deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(225deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(45deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(315deg, var(--jordy-blue) 25%, var(--cream) 25%);
+
+#color6 {
+  background-image: linear-gradient(135deg, var(--tea-green) 25%, transparent 25%), linear-gradient(225deg, var(--tea-green) 25%, transparent 25%), linear-gradient(45deg, var(--tea-green) 25%, transparent 25%), linear-gradient(315deg, var(--tea-green) 25%, var(--melon) 25%);
 }
-#color7{
-  background-image:  linear-gradient(135deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(225deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(45deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(315deg, var(--periwinkle) 25%, var(--sunset) 25%);
+
+#color7 {
+  background-image: linear-gradient(135deg, var(--cream) 25%, transparent 25%), linear-gradient(225deg, var(--cream) 25%, transparent 25%), linear-gradient(45deg, var(--cream) 25%, transparent 25%), linear-gradient(315deg, var(--cream) 25%, var(--jordy-blue) 25%);
 }
-#color8{
-  background-image:  linear-gradient(135deg, var(--mauve) 25%, transparent 25%), linear-gradient(225deg, var(--mauve) 25%, transparent 25%), linear-gradient(45deg, var(--mauve) 25%, transparent 25%), linear-gradient(315deg, var(--mauve) 25%, var(--tea-green) 25%);
+
+#color8 {
+  background-image: linear-gradient(135deg, var(--melon) 25%, transparent 25%), linear-gradient(225deg, var(--melon) 25%, transparent 25%), linear-gradient(45deg, var(--melon) 25%, transparent 25%), linear-gradient(315deg, var(--melon) 25%, var(--electric-blue) 25%);
 }
 
 h1, h2, button, .nav, .nav_p, .nav_c,p {
@@ -153,6 +159,10 @@ p{
   position: relative;
   margin: 20px 10px;
   border: 1px solid var(--lavender);
+  padding: 25px;
+  background-position:  12px 0, 12px 0, 0 0, 0 0;
+  background-size: 24px 24px;
+  background-repeat: repeat;
 }
 
 .img-wrapper img {
