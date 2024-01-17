@@ -34,6 +34,7 @@ function preloadImages() {
     preloadedImages.push(additionalImg);
   }
 }
+
 preloadImages();
 
 //button and background change
@@ -183,12 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var playPauseText = document.getElementById("playPauseText");
   var volumeSlider = document.getElementById("volume-slider");
   var waveformDiv = document.getElementById("waveform");
-  var pageChange = document.getElementById("lavender-btn");
-
-  pageChange.addEventListener("click", function () {
-    playPauseText.textContent = "Play";
-    audio.pause();
-  });
 
   playPauseButton.addEventListener("click", function () {
     if (audio.paused) {
