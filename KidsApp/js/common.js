@@ -18,9 +18,26 @@ function preloadFonts() {
 preloadFonts();
 
 //page navigation script
+
 var currentPage = 1;
 
 function changePage(page) {
+  if (speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+  }
+  var audioElement = document.getElementById("myAudio");
+  if (audioElement && !audioElement.paused) {
+    // If playing, pause the audio
+    playPauseText.textContent = "Play";
+    audioElement.pause();
+  }
+  const currentPageElement = document.getElementById("page" + currentPage);
+  if (currentPageElement) {
+    const paragraphs = currentPageElement.getElementsByTagName("p");
+    Array.from(paragraphs).forEach((paragraph) => {
+      paragraph.innerHTML = paragraph.textContent;
+    });
+  }
   document.getElementById("page" + currentPage).style.display = "none";
   currentPage = page;
   document.getElementById("page" + currentPage).style.display = "flex";
@@ -57,20 +74,13 @@ function playClickSound() {
 function playVictorySound() {
   victorySound.play();
 }
-// Add this function to your JavaScript
-function speakAllParagraphs(page) {
-  // Get all <p> elements within the current page
-  var paragraphs = document
-    .getElementById("page" + page)
-    .getElementsByTagName("p");
 
-  // Iterate through each <p> tag
-  Array.from(paragraphs).forEach(function (paragraph, index) {
-    // Speak the text of the paragraph
-    var text = paragraph.innerText;
+const speakAndHighlightText = (target) =>
+  new Promise((resolve) => {
+    const text = target.textContent;
+    const originalHTML = target.innerHTML; // Save the original HTML content
 
-    // Create a new SpeechSynthesisUtterance
-    var utterance = new SpeechSynthesisUtterance();
+    const utterance = new SpeechSynthesisUtterance();
     utterance.text = text;
 
     // Find the voice by name
@@ -87,7 +97,39 @@ function speakAllParagraphs(page) {
       utterance.voice = voices[0];
     }
 
-    // Play the synthesized speech
+    utterance.addEventListener("boundary", ({ charIndex, charLength }) => {
+      const beforeWord = text.slice(0, charIndex);
+      const word = text.slice(charIndex, charIndex + charLength);
+      const afterWord = text.slice(charIndex + charLength, text.length);
+
+      target.innerHTML = `${beforeWord}<span style="background-color: var(--lavender); color:var(--baby-powder)">${word}</span>${afterWord}`;
+    });
+
+    utterance.addEventListener("end", () => {
+      // Revert back to the original HTML content after speech ends
+      target.innerHTML = originalHTML;
+      resolve(target);
+    });
+
     speechSynthesis.speak(utterance);
   });
+
+// Modify this function to use the speakAndHighlightText function
+function speakAllParagraphs(page) {
+  // Get all <p> elements within the current page
+  const paragraphs = document
+    .getElementById("page" + page)
+    .getElementsByTagName("p");
+
+  // Convert the NodeList to an array for easy iteration
+  const paragraphArray = Array.from(paragraphs);
+
+  // Use async/await to speak each paragraph sequentially
+  (async () => {
+    for (const paragraph of paragraphArray) {
+      await speakAndHighlightText(paragraph);
+    }
+
+    console.log("Finished speaking");
+  })();
 }
