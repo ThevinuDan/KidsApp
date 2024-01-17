@@ -81,12 +81,12 @@
 
 #resetButton {
   margin: 20px auto;
-  /* Center horizontally with auto margins */
 }
 #rangeValue{
   font-family: 'heading';
   color: var(--lavender);
   font-size: 2rem;
+  z-index: 1;
 }
 .range {
   width: 400px;
