@@ -50,6 +50,7 @@ function goToChapter(chapter) {
 function goToHome() {
   window.location.href = "/index.html";
 }
+
 document.getElementById("page1").style.display = "flex";
 
 // button click sound
