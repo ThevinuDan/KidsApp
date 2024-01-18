@@ -5,189 +5,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Puzzle container */
-    #puzzleContainer {
-      width: 500px;
-      color: #ccc;
-      padding: 20px;
-      border-radius: 10px;
-      overflow: hidden;
+    body {
+      font-family: Arial, sans-serif;
     }
 
-    /* Puzzle */
-    #piecesContainer {
-      display: flex;
-      flex-wrap: wrap;
-      /* Allow pieces to wrap to the next line */
-      gap: 0;
-      /* Remove the gap between pieces */
+    .container {
+      text-align: center;
+      margin-top: 20px;
+      position: relative;
     }
 
-    .boardPieceContainer {
-      width: 50%;
-      /* Each board piece takes 50% of the container width */
-      height: 200px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      /* Include border in width and height */
+    .hardware-item {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      position: relative;
     }
 
-    #puzzleContainer img {
-      width: 100%;
-      /* Each image takes 100% of its container's width */
-      height: 100%;
-      /* Each image takes 100% of its container's height */
-      object-fit: contain;
-    }
-
-    #board {
-      display: flex;
-      flex-wrap: wrap;
-      /* Allow board pieces to wrap to the next line */
-      gap: 0;
-      /* Remove the gap between board pieces */
-    }
-
-    #winMessage {
-      background-color: #fff;
-      padding: 20px;
-      border: 2px solid #333;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    .wire {
+      position: absolute;
+      z-index: -1;
     }
   </style>
-  <script>
-    /**
-   * Function executed when dragging the element.
-   **/
-
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-    function start(e) {
-      e.dataTransfer.effectAllowed = 'move'; // Set the effect to move (default)
-      e.dataTransfer.setData("Text", e.target.id); // Get the element to be moved
-      e.target.style.opacity = '0.4';
-
-    }
-
-    /**
-     * Function executed when the dragging of the element is finished.
-     **/
-    function end(e) {
-      e.target.style.opacity = ''; // Restore the element's opacity
-      e.dataTransfer.clearData("Data");
-    }
-
-    /**
-     * Function executed when a draggable element enters the calling element.
-     **/
-    function enter(e) {
-      return true;
-    }
-
-    /**
-     * Function executed when a draggable element is over the calling element.
-     * Returns false if the object can be dropped in that element, and true otherwise.
-     **/
-    function over(e) {
-      if ((e.target.className == "boardPieceContainer") || (e.target.id == "piecesContainer"))
-        return false;
-      else
-        return true;
-    }
-
-    /**
-     * Function executed when a draggable element is dropped on the calling element.
-     **/
-    function drop(e) {
-      e.preventDefault(); // Prevent the default action of the dropped element.
-      var draggedElement = e.dataTransfer.getData("Text");
-      e.target.appendChild(document.getElementById(draggedElement)); // Place the dropped element on the calling element
-      checkPuzzle();
-    }
-
-    function checkPuzzle() {
-      if (
-        (document.getElementById('piece1').parentNode.id == 'one') &&
-        (document.getElementById('piece2').parentNode.id == 'two') &&
-        (document.getElementById('piece3').parentNode.id == 'three') &&
-        (document.getElementById('piece4').parentNode.id == 'four')
-      ) {
-        // Create a div element for the win message
-        var winMessage = document.createElement("div");
-        winMessage.id = "winMessage";
-        winMessage.innerHTML = "Congratulations, you have completed the puzzle!";
-
-        // Append the win message to the puzzle container
-        document.getElementById("puzzleContainer").appendChild(winMessage);
-      }
-    }
-
-
-    /**
-     * Displays a warning message if the browser does not support Drag & Drop. (Not supported by IE or Safari on Windows)
-     **/
-    function checkBrowser() {
-      if (
-        (navigator.userAgent.toLowerCase().indexOf('msie ') > -1) ||
-        ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.userAgent.toLowerCase().indexOf('chrome') == -1))
-      ) {
-        alert("Your browser does not correctly support HTML5 Drag & Drop functions. Please try another browser.");
-      }
-    }
-
-    function resetPuzzle() {
-      // Remove the win message if it exists
-      var winMessage = document.getElementById("winMessage");
-      if (winMessage) {
-        winMessage.parentNode.removeChild(winMessage);
-      }
-
-      // Reset the puzzle piece positions
-      var pieces = document.querySelectorAll(".boardPieceContainer img");
-      var puzzleContainer = document.getElementById("piecesContainer");
-
-      // Shuffle the pieces randomly
-      pieces = Array.from(pieces);
-      shuffleArray(pieces);
-
-      // Move each piece back to the original container
-      pieces.forEach(function (piece) {
-        puzzleContainer.appendChild(piece);
-      });
-    }
-
-  </script>
+  <title>Hardware Components Game</title>
 </head>
 
-<body onload="checkBrowser();">
-  <section id="puzzleContainer">
-    <div id="piecesContainer" ondragenter="return enter(event)" ondragover="return over(event)"
-      ondrop="return drop(event)">
-      <img id="piece3" src="https://1.bp.blogspot.com/-8LurPyhzlD4/USVEdAH-KJI/AAAAAAAAA54/INQRSWmH79k/s320/piece3.jpg"
-        alt="piece3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
-      <img id="piece2" src="https://1.bp.blogspot.com/-daD5d1V4ct4/USVEdAGqdDI/AAAAAAAAA50/XXo8rBlTGpQ/s320/piece2.jpg"
-        alt="piece2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
-      <img id="piece4" src="https://4.bp.blogspot.com/-2R3yc2Kggvo/USVEd9UUR5I/AAAAAAAAA6A/YBxpgYG15NI/s320/piece4.jpg"
-        alt="piece4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
-      <img id="piece1" src="https://3.bp.blogspot.com/-gA3KvKhA-8w/USVEdAiWi6I/AAAAAAAAA58/btNKJqIkXHc/s320/piece1.jpg"
-        alt="piece1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+<body>
+
+  <div class="container">
+    <h1>Hardware Components Game</h1>
+    <p>Drag and connect the hardware components!</p>
+
+    <div class="hardware-item" id="cpu" onmousedown="startDrag(event, 'cpu')">
+      <img src="cpu.png" alt="CPU" width="100">
+      <p>CPU</p>
     </div>
-    <div id="board">
-      <div class="boardPieceContainer" id="one" ondragenter="return enter(event)" ondragover="return over(event)"
-        ondrop="return drop(event)"></div>
-      <div class="boardPieceContainer" id="two" ondragenter="return enter(event)" ondragover="return over(event)"
-        ondrop="return drop(event)"></div>
-      <div class="boardPieceContainer" id="three" ondragenter="return enter(event)" ondragover="return over(event)"
-        ondrop="return drop(event)"></div>
-      <div class="boardPieceContainer" id="four" ondragenter="return enter(event)" ondragover="return over(event)"
-        ondrop="return drop(event)"></div>
+
+    <div class="hardware-item" id="keyboard" onmousedown="startDrag(event, 'keyboard')">
+      <img src="keyboard.png" alt="Keyboard" width="100">
+      <p>Keyboard</p>
     </div>
-  </section>
-  <button onclick="resetPuzzle()">Reset Puzzle</button>
+
+    <div class="hardware-item" id="monitor" onmousedown="startDrag(event, 'monitor')">
+      <img src="monitor.png" alt="Monitor" width="100">
+      <p>Monitor</p>
+    </div>
+
+    <div class="hardware-item" id="mouse" onmousedown="startDrag(event, 'mouse')">
+      <img src="mouse.png" alt="Mouse" width="100">
+      <p>Mouse</p>
+    </div>
+
+    <svg class="wire" id="wire" width="100%" height="100%">
+      <line id="wire-line" x1="0" y1="0" x2="0" y2="0" stroke="black" stroke-width="2" />
+    </svg>
+  </div>
+
+  <script>
+    let isDragging = false;
+
+    function startDrag(event, component) {
+      isDragging = true;
+
+      const hardwareItem = document.getElementById(component);
+      const wire = document.getElementById('wire');
+      const wireLine = document.getElementById('wire-line');
+
+      wire.style.left = `${hardwareItem.offsetLeft + hardwareItem.clientWidth / 2}px`;
+      wire.style.top = `${hardwareItem.offsetTop + hardwareItem.clientHeight / 2}px`;
+
+      document.onmousemove = function (event) {
+        if (isDragging) {
+          const mouseX = event.clientX;
+          const mouseY = event.clientY;
+
+          wireLine.setAttribute('x2', mouseX - wire.offsetLeft);
+          wireLine.setAttribute('y2', mouseY - wire.offsetTop);
+        }
+      };
+
+      document.onmouseup = function (event) {
+        isDragging = false;
+        document.onmousemove = null;
+        document.onmouseup = null;
+
+        // Check if the mouse is over a hardware item
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        const hardwareItems = document.querySelectorAll('.hardware-item');
+        hardwareItems.forEach((item) => {
+          const rect = item.getBoundingClientRect();
+
+          if (
+            mouseX >= rect.left &&
+            mouseX <= rect.right &&
+            mouseY >= rect.top &&
+            mouseY <= rect.bottom
+          ) {
+            // Connect the wire to the center of the hardware item
+            wireLine.setAttribute('x2', rect.left + rect.width / 2 - wire.offsetLeft);
+            wireLine.setAttribute('y2', rect.top + rect.height / 2 - wire.offsetTop);
+          }
+        });
+      };
+    }
+  </script>
+
 </body>
 
 </html>
