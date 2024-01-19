@@ -17,20 +17,34 @@
 
 <body>
   <!-- Lesson 3: Sequencing and Order -->
-
   <div class="page" id="page1">
-    <h1>Welcome back, young coders!</h1>
-    <p>Today, we're going to learn about the secret sauce of coding: Sequencing and Order!</p>
-    <button onclick="changePage(2)">Next page</button>
+    <div class="background-container" id="color1"></div>
+    <h1>Code Lesson 1 Sequence</h1>
+    <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
   </div>
 
   <div class="page" id="page2">
     <h1>Sequencing</h1>
     <h2>
-      Imagine you're telling a story. You wouldn't start with "Once upon a time, the end," right? In coding, we use
-      sequences
-      to tell the computer a step-by-step story. Each step is like a sentence, and together, they create a fantastic
-      tale!
+      Imagine you're making cupcakes! Sequencing in coding is like telling the computer the steps to follow. First, we
+      get the flour, then sugar, and mix. Next, add eggs and butter, mix again. Spoon the batter into cupcake liners,
+      bake, and decorate with frosting. It's like giving the computer a recipe, so it knows the right order to make
+      something special, just like our yummy cupcakes!
     </h2>
     <button onclick="changePage(1)">Previous page</button>
     <button onclick="changePage(3)">Next page</button>
