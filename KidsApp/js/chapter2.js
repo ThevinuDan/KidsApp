@@ -4,6 +4,7 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
+
 function start(e) {
   e.dataTransfer.effectAllowed = "move"; // Set the effect to move (default)
   e.dataTransfer.setData("Text", e.target.id); // Get the element to be moved
@@ -97,6 +98,75 @@ function resetPuzzle() {
   shuffleArray(pieces);
 
   // Move each piece back to the original container
+  pieces.forEach(function (piece) {
+    puzzleContainer.appendChild(piece);
+  });
+}
+
+function start2(e) {
+  e.dataTransfer.effectAllowed = "move";
+  e.dataTransfer.setData("Text", e.target.id);
+  e.target.style.opacity = "0.4";
+}
+
+function end2(e) {
+  e.target.style.opacity = "";
+  e.dataTransfer.clearData("Data");
+}
+
+function enter2(e) {
+  return true;
+}
+
+function over2(e) {
+  if (
+    e.target.className == "pieceContainer" ||
+    e.target.id == "pieceContainer2"
+  )
+    return false;
+  else return true;
+}
+
+function drop2(e) {
+  e.preventDefault();
+  var draggedElement = e.dataTransfer.getData("Text");
+  e.target.appendChild(document.getElementById(draggedElement));
+  checkPuzzle2();
+}
+
+function checkPuzzle2() {
+  var pieces = ["piece1", "piece2", "piece3", "piece4", "piece5", "piece6"];
+
+  var allPiecesInValidContainers = pieces.every(function (pieceId) {
+    var currentPieceContainerId =
+      document.getElementById(pieceId).parentNode.id;
+    return ["one", "two", "three", "four", "five", "six"].includes(
+      currentPieceContainerId
+    );
+  });
+
+  if (allPiecesInValidContainers) {
+    var winMessage = document.createElement("div");
+    winMessage.id = "winMessage2";
+    winMessage.innerHTML = "CONGRATULATIONS! PUZZLE 2 COMPLETED";
+
+    document.getElementById("puzzleContainer2").appendChild(winMessage);
+    playVictorySound();
+    launchConfetti();
+  }
+}
+
+function resetPuzzle2() {
+  var winMessage = document.getElementById("winMessage2");
+  if (winMessage) {
+    winMessage.parentNode.removeChild(winMessage);
+  }
+
+  var pieces = document.querySelectorAll(".pieceContainer2 img");
+  var puzzleContainer = document.getElementById("pieceContainer2");
+  pieces = Array.from(pieces);
+  shuffleArray(pieces);
+
   pieces.forEach(function (piece) {
     puzzleContainer.appendChild(piece);
   });
