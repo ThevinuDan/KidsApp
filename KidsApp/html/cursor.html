@@ -4,160 +4,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/KidsApp/js/common.js" defer></script>
-  <script src="/KidsApp/js/chapter2.js" defer></script>
-  <link rel="stylesheet" href="/KidsApp/css/common.css">
-  <link rel="stylesheet" href="/KidsApp/css/buttons.css">
-  <link rel="stylesheet" href="/KidsApp/css/chapter2.css">
-  <title>Document</title>
-
+  <title>Image Selection Game</title>
   <style>
-    #puzzleContainer {
+    body {
+      font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      width: 900px;
-      color: #ccc;
-      position: relative;
-      margin-bottom: 2rem;
+      height: 100vh;
+      margin: 0;
     }
 
-    /* Puzzle */
-    #pieceContainer {
+    .container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 100%;
-      /* Take up the full width */
-      border: 0.25px var(--lavender) dotted;
-      margin-bottom: 10px;
     }
 
-    #puzzleContainer img {
-      width: 15%;
-      height: 150px;
-      padding: 0.2rem;
-      box-sizing: border-box;
+    .box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
     }
 
-    #puzzle {
-      display: flex;
-      justify-content: space-around;
-      /* Adjust as needed */
-      width: 100%;
-    }
-
-    .pieceContainer {
-      width: 150px;
-      height: 150px;
-      float: left;
-      border: 0.25px var(--lavender) dotted;
-    }
-
-    #puzzle img {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-    }
-
-    #winMessage {
-      position: absolute;
-      top: 40%;
-      left: 27%;
-      font-size: 1rem;
-      transform: translateX(-50%);
-      font-family: 'heading';
-      background-color: var(--lavender);
-      color: var(--baby-powder);
-      padding: 20px;
-      border: 3px solid;
-      border-image: linear-gradient(to left, var(--melon) 0%, var(--sunset) 12.5%, var(--cream) 25%, var(--tea-green) 37.5%, var(--electric-blue) 50%, var(--jordy-blue) 62.5%, var(--periwinkle) 75%, var(--mauve) 87.5%);
-      border-image-slice: 1;
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      cursor: pointer;
     }
   </style>
-
 </head>
 
 <body>
-  <div class="page" id="page1">
-    <div class="background-container" id="color2"></div>
-    <h2>Drag and drop all the hardware</h2>
-    <section id="puzzleContainer">
-      <div id="pieceContainer" ondragenter="return enter(event)" ondragover="return over(event)"
-        ondrop="return drop(event)">
-        <img id="piece3" src="/KidsApp/img/desktop microphone.jpg" alt="piece3" draggable="true"
-          ondragstart="start(event)" ondragend="end(event)">
-        <img id="piece2" src="/KidsApp/img/desktop keyboard.jpg" alt="piece2" draggable="true"
-          ondragstart="start(event)" ondragend="end(event)">
-        <img id="piece8" src="/KidsApp/img/E.png" alt="piece1" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece9" src="/KidsApp/img/E.png" alt="piece6" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece4" src="/KidsApp/img/desktop monitor.jpeg" alt="piece4" draggable="true"
-          ondragstart="start(event)" ondragend="end(event)">
-        <img id="piece1" src="/KidsApp/img/desktop mouse.png" alt="piece1" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece6" src="/KidsApp/img/desktop mouse.png" alt="piece6" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece5" src="/KidsApp/img/desktop mouse.png" alt="piece5" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece10" src="/KidsApp/img/E.png" alt="piece3" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece12" src="/KidsApp/img/E.png" alt="piece2" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece11" src="/KidsApp/img/E.png" alt="piece4" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-        <img id="piece7" src="/KidsApp/img/E.png" alt="piece5" draggable="true" ondragstart="start(event)"
-          ondragend="end(event)">
-      </div>
-      <div id="puzzle">
-        <div class="pieceContainer" id="one" ondragenter="return enter(event)" ondragover="return over(event)"
-          ondrop="return drop(event)"></div>
-        <div class="pieceContainer" id="two" ondragenter="return enter(event)" ondragover="return over(event)"
-          ondrop="return drop(event)"></div>
-        <div class="pieceContainer" id="three" ondragenter="return enter(event)" ondragover="return over(event)"
-          ondrop="return drop(event)"></div>
-        <div class="pieceContainer" id="four" ondragenter="return enter(event)" ondragover="return over(event)"
-          ondrop="return drop(event)"></div>
-        <div class="pieceContainer" id="five" ondragenter="return enter(event)" ondragover="return over(event)"
-          ondrop="return drop(event)"></div>
-        <div class="pieceContainer" id="six" ondragenter="return enter(event)" ondragover="return over(event)"
-          ondrop="return drop(event)"></div>
-      </div>
-    </section>
-    <button id="resetButton" onclick="playClickSound(),resetPuzzle()" id="rainbow-btn" class="pushable">
-      <span class="shadow"></span>
-      <span class="edge" id="rainbow-btn-edge"></span>
-      <span class="front" id="rainbow-btn-front">
-        Reset
-      </span>
-    </button>
-    <div>
-      <button onclick="playClickSound(),changePage(10)" id="lavender-btn" class="pushable">
-        <span class="shadow"></span>
-        <span class="edge" id="lavender-btn-edge"></span>
-        <span class="front" id="lavender-btn-front">
-          &#10092;&#10092;
-        </span>
-      </button>
-      <button onclick="playClickSound(),changePage(12)" id="lavender-btn" class="pushable">
-        <span class="shadow"></span>
-        <span class="edge" id="lavender-btn-edge"></span>
-        <span class="front" id="lavender-btn-front">
-          &#10093;&#10093;
-        </span>
-      </button>
+
+  <div class="container">
+    <div class="box" id="box1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p>Box 1 (Select 6)</p>
+      <img src="image1.jpg" id="img1" draggable="true" ondragstart="drag(event)">
+      <img src="image2.jpg" id="img2" draggable="true" ondragstart="drag(event)">
+      <img src="image3.jpg" id="img3" draggable="true" ondragstart="drag(event)">
+      <img src="image4.jpg" id="img4" draggable="true" ondragstart="drag(event)">
+      <img src="image5.jpg" id="img5" draggable="true" ondragstart="drag(event)">
+      <img src="image6.jpg" id="img6" draggable="true" ondragstart="drag(event)">
+      <img src="image7.jpg" id="img7" draggable="true" ondragstart="drag(event)">
+      <img src="image8.jpg" id="img8" draggable="true" ondragstart="drag(event)">
+      <img src="image9.jpg" id="img9" draggable="true" ondragstart="drag(event)">
+      <img src="image10.jpg" id="img10" draggable="true" ondragstart="drag(event)">
+      <img src="image11.jpg" id="img11" draggable="true" ondragstart="drag(event)">
+      <img src="image12.jpg" id="img12" draggable="true" ondragstart="drag(event)">
     </div>
-    <nav class="breadcrumbs">
-      <a href="/index.html" class="breadcrumbs__item">Home</a>
-      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
-      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
-      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
-      <a onclick="changePage(9)" class="breadcrumbs__item is-active">Mouse</a>
-      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
-      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
-    </nav>
+
+    <div class="box" id="box2" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p>Box 2 (Selected: 0)</p>
+    </div>
   </div>
+
+  <script>
+    function allowDrop(event) {
+      event.preventDefault();
+    }
+
+    function drag(event) {
+      event.dataTransfer.setData("text", event.target.id);
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      var data = event.dataTransfer.getData("text");
+      var draggedElement = document.getElementById(data);
+
+      // Check if the target box is Box 2 and the selected count is less than 6
+      if (event.target.id === "box2" && document.querySelectorAll('#box2 img').length < 6) {
+        // Append the dragged element to Box 2
+        event.target.appendChild(draggedElement);
+        // Update the selected count
+        updateSelectedCount();
+      }
+    }
+
+    function updateSelectedCount() {
+      var selectedCount = document.querySelectorAll('#box2 img').length;
+      document.querySelector('#box2 p').innerText = 'Box 2 (Selected: ' + selectedCount + ')';
+    }
+  </script>
+
 </body>
 
 </html>
