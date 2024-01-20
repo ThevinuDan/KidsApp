@@ -6,3 +6,4 @@ Chapter 1
 ----Speaker
 ----Microphone
 Chapter 2
+--Comp
