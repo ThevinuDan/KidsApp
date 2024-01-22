@@ -1,50 +1,74 @@
-Chapter 1
---Computer Parts [3/5]
-----Monitor 
--------Color Change on click [O]
-----Keyboard 
--------Picture Change on key [O]
-----Mouse 
--------Picture Change on hover and extra on click [X
-----Speaker
--------Pause/Play/Volume/PAN/ [X
-----Microphone 
--------Talking Emiliy [O]
-____________CODE_____________
+COMPUTER PARTS
+==========================================================================
+Chapter 1                                                                |
+--Computer Parts [3/5]                                                   |
+----Monitor                                                              |
+-------Color Change on click [O]                                         |
+----Keyboard                                                             |
+-------Picture Change on key [O]                                         |
+----Mouse                                                                |
+-------Picture Change on hover and extra on click [X                     |
+----Speaker                                                              |
+-------Pause/Play/Volume/PAN/ [X                                         |
+----Microphone                                                           |
+-------Talking Emiliy [O]                                                |                                                                                           
+==========================================================================
+COMPUTER PARTS END
 
-Chapter 1 
---Drag and drop [0/4]
-----Drag and drop a picture 
-------whole picture [X
-------Combine pictures [X
-----Drag and drop a code block x2  
-------1 block [X
-------connect 2 blocks [X
-------connect 3 blocks [X
+TEACH CODEING SYLLABUS
+==========================================================================
+Chapter 1                                                                |
+--Drag and drop [0/4]                                                    |
+----Drag and drop a picture                                              |
+------whole picture [X                                                   |
+------Combine pictures [X                                                |
+----Drag and drop a code block x2                                        |
+------1 block [X                                                         |
+------connect 2 blocks [X                                                |
+------connect 3 blocks [X                                                |
+==========================================================================
+Chapter 2                                                                |
+--Sequence and Steps [0/10]                                              |
+----CupCake                                                              |
+-------Create a Cupcake step by step [X                                  |
+----Move chef to cupcake                                                 |
+-------Move chef to 2 right [X                                           |
+-------Move chef to 2 left [X                                            |
+-------Move chef to 2 right and 1 up [X                                  |
+-------Move chef to 2 left and 2 up [X                                   |
+-------Move chef to 2 up and 2 right [X                                  |
+-------Move chef to 4 down [X                                            |
+-------Move chef to 4 Left [X                                            |
+-------Move chef to 4 up and 4 right [X                                  |
+-------Move chef to 2 left and 4 up [X                                   |
+==========================================================================
+Chapter 3                                                                |
+--Loops [0/17]                                                           |
+----Patterns                                                             |
+------Show 2blockx3 and 3blockx2 and 4blockx2 Patterns [X                |
+------Make 2blockx3 patten normally [X                                   |
+------make 2blockx3 pattern loop block [X                                |
+------Make 3blockx2 patten normally [X                                   |
+------make 3blockx2 pattern loop block [X                                |
+------Make 4blockx2 patten normally [X                                   |
+------make 4blockx2 pattern loop block [X                                |
+----Loops with Sequence                                                  |
+------Make 3 cupcakes normally [X                                        |
+------Make 2 cupcakes loop block [X                                      |
+------Make 3 cupcakes loop block [X                                      |
+------Make 4 cupcakes loop block [X                                      |
+------Move chef 4 steps right normally [X                                |
+------Move chef 4 steps right loop block [X                              |
+------Move chef left 3 up and 3 left normally [X                         |
+------Move chef left 3 up and 3 left loop block [X                       |
+------Move chef 2 down 4 left loop block [X                              |
+------Move chef 4 up and 4 down with loop block [X                       |
+==========================================================================
+TEACH CODEING SYLLABUS END
 
-Chapter 2
---Sequence and Steps [0/10]
-----CupCake
--------Create a Cupcake step by step [X
-----Move chef to cupcake
--------Move chef to 2 right [X
--------Move chef to 2 left [X
--------Move chef to 2 right and 1 up [X
--------Move chef to 2 left and 2 up [X
--------Move chef to 2 up and 2 right [X
--------Move chef to 4 down [X
--------Move chef to 4 Left [X
--------Move chef to 4 up and 4 right [X
--------Move chef to 2 left and 4 up [X
 
-Chapter 3
---Loops
-----Patterns
-------Show 2blockx3 Pattern
-
-
-
-////////////EXTRAS///////////
-Farm
-Emiliy
-CodePen Projects
+EXTRAS
+Guide [X
+Farm [X
+Emiliy [X
+CodeLab Games [X
