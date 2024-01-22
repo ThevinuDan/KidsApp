@@ -65,7 +65,7 @@
 
 <body>
   <div class="page" id="page1">
-    <h1 style="margin-bottom: 0; font-family: 'Intro'; font-size: 10rem;">
+    <h1 style="margin-bottom: 0;font-size: 10rem;">
       <span style="color:var(--melon);">K</span>
       <span style="color:var(--sunset);">I</span>
       <span style="color:var(--cream);">D</span>
@@ -74,50 +74,44 @@
       <span style="color:var(--jordy-blue);">P</span>
       <span style="color:var(--periwinkle);">P</span>
     </h1>
-    <p style="margin-top: 0;">Hi Avesh :) try out the first chapter</p>
+    <p style="margin-top: 0;">Made with Code and Coffee
+    </p>
+    <button onclick="playClickSound(),goToChapter('chapter1')" id="rainbow-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="rainbow-btn-edge"></span>
+      <span class="front" id="rainbow-btn-front">
+        <span style="font-family: 'subheading';">Computer Parts</span>
+      </span>
+    </button>
     <div>
-      <button onclick="playClickSound(),goToChapter('chapter1')" id="rainbow-btn" class="pushable">
-        <span class="shadow"></span>
-        <span class="edge" id="rainbow-btn-edge"></span>
-        <span class="front" id="rainbow-btn-front">
-          <span style="font-family: 'subheading';">Chapter</span><span style="font-family: 'heading';"> 1</span>
-        </span>
-      </button>
       <button onclick="playClickSound(),goToChapter('chapter2')" id="rainbow-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="rainbow-btn-edge"></span>
         <span class="front" id="rainbow-btn-front">
-          <span style="font-family: 'subheading';">Chapter</span><span style="font-family: 'heading';"> 2</span>
+          <span style="font-family: 'subheading';">Codeing</span><span style="font-family: 'heading';"> 1</span>
         </span>
       </button>
       <button onclick="playClickSound(),goToChapter('building')" id="rainbow-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="rainbow-btn-edge"></span>
         <span class="front" id="rainbow-btn-front">
-          <span style="font-family: 'subheading';">Chapter</span><span style="font-family: 'heading';"> 3</span>
+          <span style="font-family: 'subheading';">Codeing</span><span style="font-family: 'heading';"> 2</span>
         </span>
       </button>
       <button onclick="playClickSound(),goToChapter('building')" id="rainbow-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="rainbow-btn-edge"></span>
         <span class="front" id="rainbow-btn-front">
-          <span style="font-family: 'subheading';">Chapter</span><span style="font-family: 'heading';"> 4</span>
+          <span style="font-family: 'subheading';">Codeing</span><span style="font-family: 'heading';"> 3</span>
         </span>
       </button>
     </div>
     <div>
-      <button onclick="playClickSound(),goToChapter('building')" id="yellow-btn" class="pushable">
-        <span class="shadow"></span>
-        <span class="edge" id="rainbow-btn-edge"></span>
-        <span class="front" id="yellow-btn-front">
-          <span style="font-family: 'subheading';">Guide</span>
-        </span>
-      </button>
       <button onclick="playClickSound(),goToChapter('building')" id="green-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="rainbow-btn-edge"></span>
         <span class="front" id="green-btn-front">
-          <span style="font-family: 'subheading';">CodeLab</span>
+          <span style="font-family: 'subheading';">Farm</span>
         </span>
       </button>
       <button onclick="playClickSound(),goToChapter('building')" id="blue-btn" class="pushable">
@@ -128,12 +122,19 @@
         </span>
       </button>
     </div>
-    <!-- <button onclick="playClickSound(),document.getElementById('id01').style.display='block', launchConfetti();"
+    <button onclick="playClickSound(),document.getElementById('id01').style.display='block', launchConfetti();"
       id="rainbow-btn" class="pushable">
       <span class="shadow"></span>
       <span class="edge" id="rainbow-btn-edge"></span>
       <span class="front" id="red-btn-front">
         <span style="font-family: 'subheading'; color: var(--baby-powder);">Suprise</span>
+      </span>
+    </button>
+    <button onclick="playClickSound(),goToChapter('building')" id="yellow-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="rainbow-btn-edge"></span>
+      <span class="front" id="yellow-btn-front">
+        <span style="font-family: 'subheading';">Guide</span>
       </span>
     </button>
     <div id="id01" class="modal">
@@ -181,18 +182,16 @@
           </span>
         </button>
       </div>
-    </div> -->
-  </div>
 
-  <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
 </body>
 
 </html>
