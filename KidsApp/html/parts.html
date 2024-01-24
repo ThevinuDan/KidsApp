@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script src="/KidsApp/js/common.js" defer></script>
+  <script src="/KidsApp/js/confettii.js" defer></script>
+  <script src="/KidsApp/js/parts.js" defer></script>
+  <link rel="stylesheet" href="/KidsApp/css/common.css">
+  <link rel="stylesheet" href="/KidsApp/css/buttons.css">
+  <link rel="stylesheet" href="/KidsApp/css/parts.css">
+  <title>Chapter 1</title>
+</head>
+
+<body>
+
+  <div class="page" id="page1">
+    <div class="background-container" id="color1"></div>
+    <h1>Computer Parts</h1>
+    <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page2">
+    <div class="background-container" id="color2"></div>
+    <h2>Introduction</h2>
+    <p>
+      Welcome little tech explorers! Today, we're embarking on a journey into the exciting world of computers. Let's
+      start by getting to know the main devices of a computer, we'll be working with - the monitor, keyboard, mouse,
+      microphone and speakers
+    </p>
+    <div>
+      <button onclick="playClickSound(),changePage(1)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="speakAllParagraphs(2)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          Tell Me
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(3)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page3">
+    <div class="background-container" id="color3"></div>
+    <h2>Monitors</h2>
+    <div class="img-container">
+      <div class="img-wrapper" id="color3">
+        <img src="/KidsApp/img/desktop monitor.jpeg" alt="Image of computer monitor.">
+        <div class="img-text">
+          <p>Desktop Computer Monitor</p>
+        </div>
+      </div>
+      <div class="img-wrapper" id="color3">
+        <img src="/KidsApp/img/laptop monitor.jpeg" alt="Image of laptop monitor.">
+        <div class="img-text">
+          <p>Laptop Computer Monitor</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(4)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item is-active">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page4">
+    <div class="background-container" id="color4"></div>
+    <h2>The Monitor</h2>
+    <p>
+      A computer monitor is like a special TV for your computer. It shows you all the cool pictures and videos your
+      computer wants to share with you. Anything you click, type, or scroll, you will see it on the monitor.
+      It's a window to the computer's world, showing you colorful cartoons and pictures for lots of fun!
+    </p>
+    <div>
+      <button onclick="playClickSound(),changePage(3)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="speakAllParagraphs(4)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          Tell Me
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(5)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item is-active">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page5">
+    <div class="background-container"></div>
+    <h2>Click the button to change the color of the monitor</h2>
+    <div>
+      <button onclick="playClickSound()" id="red-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="red-btn-edge"></span>
+        <span class="front" id="red-btn-front">
+          RED
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="orange-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="orange-btn-edge"></span>
+        <span class="front" id="orange-btn-front">
+          ORANGE
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="yellow-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="yellow-btn-edge"></span>
+        <span class="front" id="yellow-btn-front">
+          YELLOW
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="green-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="green-btn-edge"></span>
+        <span class="front" id="green-btn-front">
+          GREEN
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="blue-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="blue-btn-edge"></span>
+        <span class="front" id="blue-btn-front">
+          BLUE
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="indigo-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="indigo-btn-edge"></span>
+        <span class="front" id="indigo-btn-front">
+          INDIGO
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="violet-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="violet-btn-edge"></span>
+        <span class="front" id="violet-btn-front">
+          VIOLET
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="pink-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="pink-btn-edge"></span>
+        <span class="front" id="pink-btn-front">
+          PINK
+        </span>
+      </button>
+    </div>
+    <div>
+      <button onclick="playClickSound(),changePage(4)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item is-active">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page6">
+    <div class="background-container" id="color5"></div>
+    <h2>Keyboards</h2>
+    <div class="img-container">
+      <div class="img-wrapper" id="color5">
+        <img src="/KidsApp/img/desktop keyboard.jpg"
+          alt="Image of a traditional computer keyboard with letters and number keys.">
+        <div class="img-text">
+          <p>Button Keyboard</p>
+        </div>
+      </div>
+      <div class="img-wrapper" id="color5">
+        <img src="/KidsApp/img/touch keyboard.jpg" alt="Image of a digital keyboard on a Tablet device.">
+        <div class="img-text">
+          <p>Touch Keyboard</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button onclick="playClickSound(),changePage(5)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(7)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item is-active">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page7">
+    <div class="background-container" id="color6"></div>
+    <h2>The Keyboard</h2>
+    <p>
+      The keyboard is a board full of buttons. each button is special and will help you do different things with the
+      computer. pressing the right buttons will let you have lots of fun with your computer. you can use the keyboard to
+      write stories and play games with the computer.
+    </p>
+
+    <div>
+      <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="speakAllParagraphs(7)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          Tell Me
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(8)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item is-active">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page8">
+    <div class="background-container" id="color7"></div>
+    <h2>Click on the alaphebet buttons on the keyboard</h2>
+    <div id="alphabetImg"></div>
+    <div>
+      <button onclick="playClickSound(),changePage(7)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(9)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item is-active">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page9">
+    <div class="background-container" id="color8"></div>
+    <h2>Mouse</h2>
+    <div class="img-container">
+      <div class="img-wrapper" id="color8">
+        <img src="/KidsApp/img/desktop mouse.png"
+          alt="Image of a traditional computer keyboard with letters and number keys.">
+        <div class="img-text">
+          <p>Desktop Computer Mouse</p>
+        </div>
+      </div>
+      <div class="img-wrapper" id="color8">
+        <img src="/KidsApp/img/laptop mouse.jpeg" alt="Image of a digital keyboard on a Tablet device.">
+        <div class="img-text">
+          <p>Laptop Computer Mouse</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button onclick="playClickSound(),changePage(8)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(10)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item is-active">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page10">
+    <div class="background-container" id="color1"></div>
+    <h2>The Mouse</h2>
+    <p>
+      The mouse is used to move and click things on the screen. its not a real mouse, its called the mouse becuase of
+      its
+      curved shape. there is a little arrow on the screen that you can move with the mouse. if you want click, scroll or
+      drag something on the screen, the mouse is a very handy tool
+    </p>
+    <div>
+      <button onclick="playClickSound(),changePage(9)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="speakAllParagraphs(10)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          Tell Me
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(11)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item is-active">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page11">
+    <div class="background-container" id="color2"></div>
+    <h2>Use the mouse to Drag and drop the pieces</h2>
+    <section id="puzzleContainer">
+      <div id="pieceContainer" ondragenter="return enter(event)" ondragover="return over(event)"
+        ondrop="return drop(event)">
+        <img id="piece3"
+          src="https://1.bp.blogspot.com/-8LurPyhzlD4/USVEdAH-KJI/AAAAAAAAA54/INQRSWmH79k/s320/piece3.jpg" alt="piece3"
+          draggable="true" ondragstart="start(event)" ondragend="end(event)">
+        <img id="piece2"
+          src="https://1.bp.blogspot.com/-daD5d1V4ct4/USVEdAGqdDI/AAAAAAAAA50/XXo8rBlTGpQ/s320/piece2.jpg" alt="piece2"
+          draggable="true" ondragstart="start(event)" ondragend="end(event)">
+        <img id="piece4"
+          src="https://4.bp.blogspot.com/-2R3yc2Kggvo/USVEd9UUR5I/AAAAAAAAA6A/YBxpgYG15NI/s320/piece4.jpg" alt="piece4"
+          draggable="true" ondragstart="start(event)" ondragend="end(event)">
+        <img id="piece1"
+          src="https://3.bp.blogspot.com/-gA3KvKhA-8w/USVEdAiWi6I/AAAAAAAAA58/btNKJqIkXHc/s320/piece1.jpg" alt="piece1"
+          draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      </div>
+      <div id="puzzle">
+        <div class="pieceContainer" id="one" ondragenter="return enter(event)" ondragover="return over(event)"
+          ondrop="return drop(event)"></div>
+        <div class="pieceContainer" id="two" ondragenter="return enter(event)" ondragover="return over(event)"
+          ondrop="return drop(event)"></div>
+        <div class="pieceContainer" id="three" ondragenter="return enter(event)" ondragover="return over(event)"
+          ondrop="return drop(event)"></div>
+        <div class="pieceContainer" id="four" ondragenter="return enter(event)" ondragover="return over(event)"
+          ondrop="return drop(event)"></div>
+      </div>
+    </section>
+    <button id="resetButton" onclick="playClickSound(),resetPuzzle()" id="rainbow-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="rainbow-btn-edge"></span>
+      <span class="front" id="rainbow-btn-front">
+        Reset
+      </span>
+    </button>
+    <div>
+      <button onclick="playClickSound(),changePage(10)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(12)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item is-active">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page12">
+    <div class="background-container" id="color3"></div>
+    <h2>Speaker</h2>
+    <div class="img-container">
+      <div class="img-wrapper" id="color3">
+        <img src="/KidsApp/img/desktop speaker.jpg"
+          alt="Image of a traditional computer keyboard with letters and number keys.">
+        <div class="img-text">
+          <p>Desktop Computer Speaker</p>
+        </div>
+      </div>
+      <div class="img-wrapper" id="color3">
+        <img src="/KidsApp/img/portable speaker.png" alt="Image of a digital keyboard on a Tablet device.">
+        <div class="img-text">
+          <p>Handheld Speaker</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button onclick="playClickSound(),changePage(11)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(13)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item is-active">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page13">
+    <div class="background-container" id="color4"></div>
+    <h2>The Speaker</h2>
+    <p>
+      Computers can talk to you and play your favourite music, but they need the help of speakers. You can make the
+      speakers loud, or quiet with a button. So, when you're watching cartoons, or listening to music on the computer,
+      it's the speakers making all the cool sounds for you!
+    </p>
+    <div>
+      <button onclick="playClickSound(),changePage(12)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="speakAllParagraphs(13)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          Tell Me
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(14)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item is-active">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page14">
+    <div class="background-container" id="color5"></div>
+    <h2>Change the volume comeing from the speakers</h2>
+    <audio id="myAudio" loop>
+      <source src="/KidsApp/audio/background.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="playClickSound()" id="playPauseButton" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="rainbow-btn-edge"></span>
+      <span class="front" id="rainbow-btn-front">
+        <span id="playPauseText">Play</span>
+    </button>
+    <span id="rangeValue">0</span>
+    <input class="range" type="range" id="volume-slider" min="0" max="10" step="1" value="10"
+      onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)" />
+    <div id="waveform"></div>
+    <div>
+      <button onclick="playClickSound(),changePage(13)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(15)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item is-active">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page15">
+    <div class="background-container" id="color6"></div>
+    <h2>Microphone</h2>
+    <div class="img-container">
+      <div class="img-wrapper" id="color6">
+        <img src="/KidsApp/img/desktop microphone.jpg"
+          alt="Image of a traditional computer keyboard with letters and number keys.">
+        <div class="img-text">
+          <p>Stage Microphone</p>
+        </div>
+      </div>
+      <div class="img-wrapper" id="color6">
+        <img src="/KidsApp/img/lapel microphone.jpeg" alt="Image of a digital keyboard on a Tablet device.">
+        <div class="img-text">
+          <p>Lapel Microphone</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button onclick="playClickSound(),changePage(14)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(16)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item is-active">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page16">
+    <div class="background-container" id="color7"></div>
+    <h2>The Microphone</h2>
+    <p>
+      Do you know how the computer listens to you? The computer uses the microphone to listen. When you want to talk
+      with
+      your friend through the computer, whatever you tell the computer through the microphone, it Listens, and sends
+      them
+      to your friend. You can even ask the computer to do amazing things for you, with the microphone.
+    </p>
+
+    <div>
+      <button onclick="playClickSound(),changePage(15)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="speakAllParagraphs(16)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          Tell Me
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(17)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item is-active">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page17">
+    <div class="background-container" id="color8"></div>
+    <h2>Talking Emily</h2>
+    <div id="Emily" onclick="startTalkingEmily()">
+      <img id="listen"
+        src="https://www.dropbox.com/scl/fi/0nl6y86r0hlq91fnx5yq9/listen.gif?rlkey=xnz91qrj0b1j58ln3qsqfivrx&raw=1"
+        alt="Emiliy Listening">
+      <img id="speak"
+        src="https://www.dropbox.com/scl/fi/nwidop10j5abbpn614lp6/speak.gif?rlkey=tukhffvv609wv84gnnj4swhe2&raw=1"
+        alt="Emiliy Speaking">
+      <img id="still"
+        src="https://www.dropbox.com/scl/fi/sw8oezpt9swy6yf9tdmmx/still.gif?rlkey=4y3hn7sg6mx7e3fdn5bw4q3ri&raw=1"
+        alt="Emiliy Staying Still">
+    </div>
+    <p style="margin-top: 0px;">Click on Emily and she will listen to you with the computer microphone</p>
+    <div>
+      <button onclick="playClickSound(),changePage(16)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(18)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item is-active">Microphone</a>
+    </nav>
+  </div>
+
+  <div class="page" id="page18">
+    <div class="background-container" id="color1"></div>
+    <h1>The End!</h1>
+    <p>Great job, mini tech wizards! Keep being curious and exploring the exciting world of computer parts!
+      Have a blast on your tech adventures!</p>
+    <button onclick="playClickSound(),changePage(17)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),goToChapter('building')" id="rainbow-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="rainbow-btn-edge"></span>
+      <span class="front" id="rainbow-btn-front">
+        Next Chapter
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item">Introduction</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">Monitor</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">Keyboard</a>
+      <a onclick="changePage(9)" class="breadcrumbs__item">Mouse</a>
+      <a onclick="changePage(12)" class="breadcrumbs__item">Speaker</a>
+      <a onclick="changePage(15)" class="breadcrumbs__item">Microphone</a>
+    </nav>
+  </div>
+
+</body>
+
+</html>
