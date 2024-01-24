@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/KidsApp/css/common.css">
+  <link rel="stylesheet" href="/KidsApp/css/buttons.css">
+  <!-- Load Blockly core -->
+  <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+  <!-- Load the default blocks -->
+  <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+  <!-- Load a generator -->
+  <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+  <!-- Load a message file -->
+  <script src="https://unpkg.com/blockly/msg/en.js"></script>
+  <!-- <script src="https://unpkg.com/blockly"></script> -->
+  <script src="/KidsApp/js/myblocks.js" defer></script>
+  <script src="/KidsApp/js/code1.js" defer></script>
+  <script src="/KidsApp/js/common.js" defer></script>
+
+  <title>Coding 1</title>
+  <style>
+    .workspace {
+      width: 900px;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page" id="page1">
+    <div class="background-container" id="color1"></div>
+    <h1>Drag and Drop</h1>
+    <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page2">
+    <div class="background-container" id="color2"></div>
+    <h2>Drag and drop image block</h2>
+    <div id="singleImage" class="workspace"></div>
+    <xml id="singleImage_toolbox" style="display: none">
+      <block type="pic_full"></block>
+    </xml>
+    <br>
+    <div>
+      <button onclick="playClickSound(),changePage(1)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(3)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page3">
+    <div class="background-container" id="color3"></div>
+    <h2>Drag and drop and combine 2piece image blocks</h2>
+    <div id="halfImage" class="workspace"></div>
+    <xml id="halfImage_toolbox" style="display: none">
+      <block type="pic_half1"></block>
+      <block type="pic_half2"></block>
+    </xml>
+    <br>
+    <div>
+      <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(4)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page4">
+    <div class="background-container" id="color4"></div>
+    <h2>Drag and drop and combine 3piece image blocks</h2>
+    <div id="threeImage" class="workspace"></div>
+    <xml id="threeImage_toolbox" style="display: none">
+      <block type="pic_quart1"></block>
+      <block type="pic_quart2"></block>
+      <block type="pic_quart3"></block>
+      <block type="pic_full"></block>
+
+    </xml>
+    <br>
+    <div>
+      <button onclick="playClickSound(),changePage(3)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(5)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page5">
+    <div class="background-container" id="color5"></div>
+    <h2>Drag and drop a code block</h2>
+    <div id="cBlockDrop" class="workspace"></div>
+    <xml id="cBlockDrop_toolbox" style="display: none">
+      <block type="run_code"></block>
+    </xml>
+    <br>
+    <div>
+      <button onclick="playClickSound(),changePage(4)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page6">
+    <div class="background-container" id="color6"></div>
+    <h2>Drag and drop a code block under when run</h2>
+    <div id="cBlockDrop2" class="workspace"></div>
+    <xml id="cBlockDrop2_toolbox" style="display: none">
+      <block type="code_block"></block>
+    </xml>
+    <xml id="cBlockDrop2Start" style="display: none">
+      <block type="run_code"></block>
+    </xml>
+    <br>
+    <div>
+      <button onclick="playClickSound(),changePage(5)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(7)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page7">
+    <div class="background-container" id="color7"></div>
+    <h2>Drag and drop two code blocks under when run</h2>
+    <div>
+      <div id="cBlockDrop3" class="workspace"></div>
+      <xml id="cBlockDrop3_toolbox" style="display: none">
+        <block type="code_blockM"></block>
+        <block type="code_block"></block>
+      </xml>
+      <xml id="cBlockDrop3Start" style="display: none">
+        <block type="run_code"></block>
+      </xml>
+      <br>
+      <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(8)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page8">
+    <div class="background-container" id="color8"></div>
+    <h1>The End!</h1>
+    <p>Great job, mini tech wizards! Keep being curious and exploring the exciting world of computer parts!
+      Have a blast on your tech adventures!</p>
+    <button onclick="playClickSound(),changePage(7)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10092;&#10092;
+      </span>
+    </button>
+    <button onclick="playClickSound(),goToChapter('building')" id="rainbow-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="rainbow-btn-edge"></span>
+      <span class="front" id="rainbow-btn-front">
+        Next Chapter
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+
+
+</body>
+
+</html>
