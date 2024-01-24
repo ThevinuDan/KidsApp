@@ -18,14 +18,15 @@ COMPUTER PARTS END
 TEACH CODEING SYLLABUS
 ==========================================================================
 Chapter 1                                                                |
---Drag and drop [0/4]                                                    |
+--Drag and drop [6/6]                                                    |
 ----Drag and drop a picture                                              |
-------whole picture [X                                                   |
-------Combine pictures [X                                                |
+------whole picture [O]                                                  |
+------Combine 2 piece pictures [O]                                       |
+------Combine 3 piece pictures [O]                                       |
 ----Drag and drop a code block x2                                        |
-------1 block [X                                                         |
-------connect 2 blocks [X                                                |
-------connect 3 blocks [X                                                |
+------1 block [O]                                                        |
+------connect 1 block under when run[O]                                  |
+------connect 2 block under when run[O]                                  |
 ==========================================================================
 Chapter 2                                                                |
 --Sequence and Steps [0/10]                                              |
@@ -70,3 +71,4 @@ EXTRAS
 Guide [X
 Farm [X
 Emiliy [X
+Code Piano [X
