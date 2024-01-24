@@ -11,7 +11,7 @@
 --lavender:hsl(245, 62%, 66%);
 }
 @font-face {
-  font-family: 'Intro'; /* Specify your custom font family name */
+  font-family: 'bread'; /* Specify your custom font family name */
   src: url('/KidsApp/fonts/MaryKate.woff2') format('woff2')
   /* Add additional formats if needed (e.g., ttf, otf) */
 }
@@ -21,6 +21,7 @@
   src: url('/KidsApp/fonts/Comicy.woff2') format('woff2')
   /* Add additional formats if needed (e.g., ttf, otf) */
 }
+
 @font-face {
   font-family: 'heading'; /* Specify your custom font family name */
   src: url('/KidsApp/fonts/Comicy.woff2') format('woff2')
@@ -38,6 +39,7 @@
   src: url('/KidsApp/fonts/TarifArabic-Regular.woff2') format('woff2')
   /* Add additional formats if needed (e.g., ttf, otf) */
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -45,8 +47,9 @@ body {
 }
 
 .breadcrumbs {
-  font-family: 'content';
+  font-family: 'bread';
   position: absolute;
+  font-size: 1rem;
   top: 0;
   left: 0;
   border: 1px solid var(--lavender);
@@ -77,8 +80,11 @@ body {
 
 .page {
   background-color: var(--baby-powder);
-  position: relative;
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+ visibility: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -87,13 +93,21 @@ body {
   height: max-content;
 }
 
+.page.active {
+ display: flex;
+visibility: visible;
+top: 0;
+
+}
+
+
+
 .background-container {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image:  var(--baby-powder);
   background-position:  12px 0, 12px 0, 0 0, 0 0;
   background-size: 24px 24px;
   background-repeat: repeat;
@@ -101,33 +115,26 @@ body {
 }
 
 #color1 {
-  background-image: linear-gradient(135deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(225deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(45deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(315deg, var(--electric-blue) 25%, var(--mauve) 25%);
+  background-image: linear-gradient(135deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(225deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(45deg, var(--electric-blue) 25%, transparent 25%), linear-gradient(315deg, var(--electric-blue) 25%, var(--melon) 25%);
 }
-
 #color2 {
-  background-image: linear-gradient(135deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(225deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(45deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(315deg, var(--periwinkle) 25%, var(--sunset) 25%);
+  background-image: linear-gradient(135deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(225deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(45deg, var(--periwinkle) 25%, transparent 25%), linear-gradient(315deg, var(--periwinkle) 25%, var(--electric-blue) 25%);
 }
-
 #color3 {
-  background-image: linear-gradient(135deg, var(--sunset) 25%, transparent 25%), linear-gradient(225deg, var(--sunset) 25%, transparent 25%), linear-gradient(45deg, var(--sunset) 25%, transparent 25%), linear-gradient(315deg, var(--sunset) 25%, var(--periwinkle) 25%);
+  background-image: linear-gradient(135deg, var(--cream) 25%, transparent 25%), linear-gradient(225deg, var(--cream) 25%, transparent 25%), linear-gradient(45deg, var(--cream) 25%, transparent 25%), linear-gradient(315deg, var(--cream) 25%, var(--melon) 25%);
 }
-
 #color4 {
-  background-image: linear-gradient(135deg, var(--mauve) 25%, transparent 25%), linear-gradient(225deg, var(--mauve) 25%, transparent 25%), linear-gradient(45deg, var(--mauve) 25%, transparent 25%), linear-gradient(315deg, var(--mauve) 25%, var(--tea-green) 25%);
+  background-image: linear-gradient(135deg, var(--mauve) 25%, transparent 25%), linear-gradient(225deg, var(--mauve) 25%, transparent 25%), linear-gradient(45deg, var(--mauve) 25%, transparent 25%), linear-gradient(315deg, var(--mauve) 25%, var(--jordy-blue) 25%);
 }
-
 #color5 {
   background-image: linear-gradient(135deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(225deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(45deg, var(--jordy-blue) 25%, transparent 25%), linear-gradient(315deg, var(--jordy-blue) 25%, var(--cream) 25%);
 }
-
 #color6 {
   background-image: linear-gradient(135deg, var(--tea-green) 25%, transparent 25%), linear-gradient(225deg, var(--tea-green) 25%, transparent 25%), linear-gradient(45deg, var(--tea-green) 25%, transparent 25%), linear-gradient(315deg, var(--tea-green) 25%, var(--melon) 25%);
 }
-
 #color7 {
   background-image: linear-gradient(135deg, var(--cream) 25%, transparent 25%), linear-gradient(225deg, var(--cream) 25%, transparent 25%), linear-gradient(45deg, var(--cream) 25%, transparent 25%), linear-gradient(315deg, var(--cream) 25%, var(--jordy-blue) 25%);
 }
-
 #color8 {
   background-image: linear-gradient(135deg, var(--melon) 25%, transparent 25%), linear-gradient(225deg, var(--melon) 25%, transparent 25%), linear-gradient(45deg, var(--melon) 25%, transparent 25%), linear-gradient(315deg, var(--melon) 25%, var(--electric-blue) 25%);
 }
@@ -207,7 +214,30 @@ p{
 .four img{
   max-width: 300px;
 }
-
+#winMessage {
+  position: absolute;
+  top:40%;
+  left: 27%;
+  font-size: 1rem;
+  transform: translateX(-50%);
+  font-family: 'heading';
+  background-color: var(--lavender);
+  color: var(--baby-powder);
+  padding: 20px;
+  border: 3px solid;
+  border-image: linear-gradient(
+    to left,
+    var(--melon) 0%,       /* Melon color */
+    var(--sunset) 12.5%,   /* Sunset color */
+    var(--cream) 25%,      /* Cream color */
+    var(--tea-green) 37.5%,/* Tea Green color */
+    var(--electric-blue) 50%,  /* Electric Blue color */
+    var(--jordy-blue) 62.5%,   /* Jordy Blue color */
+    var(--periwinkle) 75%,     /* Periwinkle color */
+    var(--mauve) 87.5%         /* Mauve color */
+  );
+  border-image-slice: 1;
+}
 
 /* Tab size for 1024px resolution */
 @media only screen and (max-width: 1024px) {
