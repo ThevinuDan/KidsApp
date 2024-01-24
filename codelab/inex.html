@@ -4,127 +4,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://unpkg.com/blockly"></script>
-  <!-- <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+  <link rel="icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/KidsApp/css/common.css">
+  <link rel="stylesheet" href="/KidsApp/css/buttons.css">
+  <!-- Load Blockly core -->
+  <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+  <!-- Load the default blocks -->
   <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+  <!-- Load a generator -->
   <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
-  <script src="https://unpkg.com/blockly/msg/en.js"></script> -->
-  <title>Document</title>
+  <!-- Load a message file -->
+  <script src="https://unpkg.com/blockly/msg/en.js"></script>
+  <!-- <script src="https://unpkg.com/blockly"></script> -->
+  <script src="/KidsApp/js/common.js" defer></script>
+  <script src="/KidsApp/js/myblocks.js" defer></script>
+  <script src="/KidsApp/js/code1.js" defer></script>
+
+  <title>Coding 1</title>
+  <style>
+    #singleImage,
+    #halfImage {
+      width: 900px;
+      height: 500px;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="blocklyDiv" style="height: 500px; width: 1000px;"></div>
-  <div id="output"
-    style="height: 480px; width: 300px; float: left; margin-left: 10px; padding: 10px; border: 1px solid #ccc;"></div>
-  <button onclick="runCode()">Run Code</button>
-  <xml id="toolbox" style="display: none">
-    <block type="cake_step_1"></block>
-    <block type="cake_step_2"></block>
-    <block type="cake_step_3"></block>
-    <block type="cake_step_4"></block>
-  </xml>
-  <!-- Initial blocks in the workspace -->
-  <xml id="startBlocks" style="display: none">
-    <block type="run_code"></block>
-    <!-- You can add more initial blocks if needed -->
-  </xml>
-
-  <script>
-
-    Blockly.Blocks['run_code'] = {
-      init: function () {
-        this.appendDummyInput()
-          .appendField("When Run ▶️");
-        this.appendDummyInput()
-          .appendField(new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" }));
-        this.setNextStatement(true, null);
-        this.setColour(120);
-        this.setTooltip("");
-        this.setHelpUrl("");
-      }
-    };
-    Blockly.Blocks['cake_step_1'] = {
-      init: function () {
-        this.appendDummyInput()
-          .appendField("Get Ingredients 🧈");
-        this.appendDummyInput()
-          .appendField(new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" }));
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(0);
-        this.setTooltip("");
-        this.setHelpUrl("");
-      }
-    };
-
-    Blockly.Blocks['cake_step_2'] = {
-      init: function () {
-        this.appendDummyInput()
-          .appendField("Mix 🥣");
-        this.appendDummyInput()
-          .appendField(new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" }));
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(0);
-        this.setTooltip("");
-        this.setHelpUrl("");
-      }
-    };
-
-    Blockly.Blocks['cake_step_3'] = {
-      init: function () {
-        this.appendDummyInput()
-          .appendField("Bake 🥘");
-        this.appendDummyInput()
-          .appendField(new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" }));
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(0);
-        this.setTooltip("");
-        this.setHelpUrl("");
-      }
-    };
-
-    Blockly.Blocks['cake_step_4'] = {
-      init: function () {
-        this.appendDummyInput()
-          .appendField("Decorate 🧁");
-        this.appendDummyInput()
-          .appendField(new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" }));
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(0);
-        this.setTooltip("");
-        this.setHelpUrl("");
-      }
-    };
-
-    var workspace = Blockly.inject('blocklyDiv',
-      {
-        toolbox: document.getElementById('toolbox'),
-        grid:
-        {
-          spacing: 20,
-          length: 3,
-          colour: '#ccc',
-          snap: true
-        },
-        move: {
-          scrollbars: {
-            horizontal: false,
-            vertical: false
-          },
-          drag: false,
-          wheel: false
-        },
-        trashcan: true
-      });
-
-    var startBlocks = document.getElementById('startBlocks');
-    Blockly.Xml.domToWorkspace(startBlocks, workspace);
-  </script>
-
+  <div class="page" id="page1">
+    <div class="background-container" id="color2"></div>
+    <h2>Drag and drop image block</h2>
+    <div id="singleImage" class="workspace"></div>
+    <xml id="singleImage_toolbox" style="display: none">
+      <block type="pic_full"></block>
+    </xml>
+    <br>
+    <div>
+      <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page2">
+    <h2>Drag and drop and combine 2piece image blocks</h2>
+    <div id="halfImage" class="workspace"></div>
+    <xml id="halfImage_toolbox" style="display: none">
+      <block type="pic_half1"></block>
+      <block type="pic_half2"></block>
+    </xml>
+    <br>
+    <div>
+      <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
 </body>
 
 </html>
