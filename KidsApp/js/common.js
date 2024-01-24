@@ -1,6 +1,7 @@
 //page navigation script
 
 var currentPage = 1;
+document.getElementById("page1").classList.add("active");
 
 function changePage(page) {
   if (speechSynthesis.speaking) {
@@ -12,18 +13,11 @@ function changePage(page) {
     playPauseText.textContent = "Play";
     audioElement.pause();
   }
-  const currentPageElement = document.getElementById("page" + currentPage);
-  if (currentPageElement) {
-    const paragraphs = currentPageElement.getElementsByTagName("p");
-    Array.from(paragraphs).forEach((paragraph) => {
-      paragraph.innerHTML = paragraph.textContent;
-    });
-  }
-  document.getElementById("page" + currentPage).style.display = "none";
-  currentPage = page;
-  document.getElementById("page" + currentPage).style.display = "flex";
-}
+  document.getElementById("page" + currentPage).classList.remove("active");
 
+  currentPage = page;
+  document.getElementById("page" + currentPage).classList.add("active");
+}
 function goToChapter(chapter) {
   window.location.href = "/KidsApp/html/" + chapter + ".html";
 }
@@ -31,8 +25,6 @@ function goToChapter(chapter) {
 function goToHome() {
   window.location.href = "/index.html";
 }
-
-document.getElementById("page1").style.display = "flex";
 
 // button click sound
 var clickSound = document.createElement("audio");
