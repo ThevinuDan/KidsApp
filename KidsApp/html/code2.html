@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/KidsApp/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/KidsApp/css/common.css">
+  <link rel="stylesheet" href="/KidsApp/css/buttons.css">
+  <!-- Load Blockly core -->
+  <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+  <!-- Load the default blocks -->
+  <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+  <!-- Load a generator -->
+  <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+  <!-- Load a message file -->
+  <script src="https://unpkg.com/blockly/msg/en.js"></script>
+  <script src="/KidsApp/js/myblocks.js" defer></script>
+  <script src="/KidsApp/js/code2.js" defer></script>
+  <script src="/KidsApp/js/common.js" defer></script>
+
+  <title>Coding 2</title>
+</head>
+
+<body>
+  <div class="page" id="page1">
+    <div class="background-container" id="color1"></div>
+    <h1>Sequence</h1>
+    <button onclick="playClickSound(),changePage(2)" id="lavender-btn" class="pushable">
+      <span class="shadow"></span>
+      <span class="edge" id="lavender-btn-edge"></span>
+      <span class="front" id="lavender-btn-front">
+        &#10093;&#10093;
+      </span>
+    </button>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+  </div>
+  <div class="page" id="page2">
+    <div class="background-container" id="color2"></div>
+    <h2>Make A Cake Step by Step</h2>
+    <div class="code_space">
+      <div id="bake_steps" class="workspace"></div>
+      <xml id="bake_steps_toolbox" style="display: none">
+        <block type="cake_step_1"></block>
+        <block type="cake_step_2"></block>
+        <block type="cake_step_3"></block>
+        <block type="cake_step_4"></block>
+      </xml>
+      <xml id="bake_steps_start" style="display: none">
+        <block type="run_code"></block>
+      </xml>
+      <div class="output_box"></div>
+    </div>
+    <div>
+      <button onclick="playClickSound(),changePage(1)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10092;&#10092;
+        </span>
+      </button>
+      <button onclick="playClickSound()" id="green-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="green-btn-edge"></span>
+        <span class="front" id="run-btn-front">
+          Run Code
+        </span>
+      </button>
+      <button onclick="playClickSound(),changePage(3)" id="lavender-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="lavender-btn-edge"></span>
+        <span class="front" id="lavender-btn-front">
+          &#10093;&#10093;
+        </span>
+      </button>
+    </div>
+    <nav class="breadcrumbs">
+      <a href="/index.html" class="breadcrumbs__item">Home</a>
+      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+    </nav>
+    <div class="overlay" id="customAlertOverlay1_1">
+      <div class="alert-box">
+        <p>HOORAY You Baked A Cake</p>
+        <button onclick="playClickSound(),closeCustomAlert('customAlertOverlay1_1')" id="rainbow-btn" class="pushable">
+          <span class="shadow"></span>
+          <span class="edge" id="rainbow-btn-edge"></span>
+          <span class="front" id="rainbow-btn-front">
+            CLOSE
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
