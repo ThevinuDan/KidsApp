@@ -2,7 +2,7 @@
 --melon: hsla(0, 100%, 84%, 1);
 --sunset: hsla(33, 100%, 82%, 1);
 --cream: hsla(62, 100%, 86%, 1);
---tea-green: hsla(110, 100%, 87%, 1);
+--tea-green: hsl(110, 100%, 87%, 1);
 --electric-blue: hsla(185, 100%, 80%, 1);
 --jordy-blue: hsla(217, 100%, 81%, 1);
 --periwinkle: hsla(249, 100%, 85%, 1);
@@ -10,15 +10,21 @@
 --baby-powder: hsl(60, 100%, 99%);
 --lavender:hsl(245, 62%, 66%);
 }
+/* :root{
+  --melon: #ffadad;
+  --sunset: #ffd6a3;
+  --cream: #fdffb8;
+  --tea-green: #c8ffbd;
+  --electric-blue: #99f6ff;
+  --jordy-blue: #9ec3ff;
+  --periwinkle: #beb3ff;
+  --mauve: #ffc7ff;
+  --baby-powder: #fffffa;
+  --lavender:#7c73de;
+  } */
 @font-face {
   font-family: 'bread'; /* Specify your custom font family name */
   src: url('/KidsApp/fonts/MaryKate.woff2') format('woff2')
-  /* Add additional formats if needed (e.g., ttf, otf) */
-}
-
-@font-face {
-  font-family: 'heading'; /* Specify your custom font family name */
-  src: url('/KidsApp/fonts/Comicy.woff2') format('woff2')
   /* Add additional formats if needed (e.g., ttf, otf) */
 }
 
@@ -84,7 +90,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
- visibility: hidden;
+  visibility: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -99,8 +105,6 @@ visibility: visible;
 top: 0;
 
 }
-
-
 
 .background-container {
   position: absolute;
@@ -214,30 +218,77 @@ p{
 .four img{
   max-width: 300px;
 }
-#winMessage {
-  position: absolute;
-  top:40%;
-  left: 27%;
-  font-size: 1rem;
-  transform: translateX(-50%);
-  font-family: 'heading';
-  background-color: var(--lavender);
-  color: var(--baby-powder);
-  padding: 20px;
-  border: 3px solid;
-  border-image: linear-gradient(
-    to left,
-    var(--melon) 0%,       /* Melon color */
-    var(--sunset) 12.5%,   /* Sunset color */
-    var(--cream) 25%,      /* Cream color */
-    var(--tea-green) 37.5%,/* Tea Green color */
-    var(--electric-blue) 50%,  /* Electric Blue color */
-    var(--jordy-blue) 62.5%,   /* Jordy Blue color */
-    var(--periwinkle) 75%,     /* Periwinkle color */
-    var(--mauve) 87.5%         /* Mauve color */
-  );
-  border-image-slice: 1;
+.code_space{
+  width: 95%;
+  padding: 2.5%;
+  padding-top: 0%;
+  z-index: 0;
 }
+.workspace {
+  width: 50%; /* Adjust the width as needed */
+  height: 70vh;
+  float: left; /* Add float: left to place the workspace on the left */
+}
+
+.output_box {
+  width: 50%; /* Adjust the width as needed */
+  height: 70vh;
+  background-color: #fff;
+  float: left; /* Add float: left to place the output box on the right */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+/* Style for the alert box */
+.alert-box {
+  background: #fff;
+  padding: 10px;
+  border: 20px solid;
+  border-image: linear-gradient(to left,
+      var(--melon) 0%,
+      /* Melon color */
+      var(--sunset) 12.5%,
+      /* Sunset color */
+      var(--cream) 25%,
+      /* Cream color */
+      var(--tea-green) 37.5%,
+      /* Tea Green color */
+      var(--electric-blue) 50%,
+      /* Electric Blue color */
+      var(--jordy-blue) 62.5%,
+      /* Jordy Blue color */
+      var(--periwinkle) 75%,
+      /* Periwinkle color */
+      var(--mauve) 87.5%
+      /* Mauve color */
+    );
+  border-image-slice: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Style for the close button */
+.close-btn {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
 
 /* Tab size for 1024px resolution */
 @media only screen and (max-width: 1024px) {
