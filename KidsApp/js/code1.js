@@ -1,3 +1,16 @@
+const myTheme = Blockly.Theme.defineTheme("myTheme", {
+  blockStyles: {
+    default: {
+      colourPrimary: "#ffc7ff",
+    },
+  },
+
+  fontStyle: {
+    family: "content", // Change the font family
+    weight: "normal", // Change the font weight (e.g., bold, normal)
+    size: 16, // Change the font size
+  },
+});
 var workspace1 = Blockly.inject("singleImage", {
   toolbox: document.getElementById("singleImage_toolbox"),
   grid: {
@@ -15,9 +28,9 @@ var workspace1 = Blockly.inject("singleImage", {
     wheel: false,
   },
   trashcan: true,
-  width: 900,
-  hieght: 500,
+  theme: myTheme,
 });
+
 workspace1.addChangeListener(function (event) {
   // Check if the change is due to a block being moved or UI interaction
   if (event.type == Blockly.Events.MOVE || event.type == Blockly.Events.UI) {
@@ -26,8 +39,7 @@ workspace1.addChangeListener(function (event) {
 
     // If there is at least one block, show completion alert
     if (blockCount > 0) {
-      console.log("win message show");
-      alert("Congratulations! You snapped a block onto workspace1.");
+      showCustomAlert("customAlertOverlay1_1");
     }
   }
 });
@@ -49,6 +61,7 @@ var workspace2 = Blockly.inject("halfImage", {
     wheel: false,
   },
   trashcan: true,
+  theme: myTheme,
 });
 workspace2.addChangeListener(function (event) {
   // Check if the change is due to a block being moved or UI interaction
@@ -65,10 +78,7 @@ workspace2.addChangeListener(function (event) {
         );
 
         if (picHalf1Block && picHalf1Block.type == "pic_half1") {
-          alert(
-            "Congratulations! You snapped a pic_half2 block under the pic_half1 block in workspace2."
-          );
-          // You can replace the alert with your desired completion message or action
+          showCustomAlert("customAlertOverlay1_2");
         }
       }
     }
@@ -92,6 +102,7 @@ var workspace3 = Blockly.inject("threeImage", {
     wheel: false,
   },
   trashcan: true,
+  theme: myTheme,
 });
 // Variables to track the presence of each block in the sequence
 var picQuart1Present = false;
@@ -143,9 +154,7 @@ workspace3.addChangeListener(function (event) {
 
 function checkCompletionW3() {
   if (picQuart1Present && picQuart2Present && picQuart3Present) {
-    alert(
-      "Congratulations! You snapped pic_quart2 under pic_quart1 and pic_quart3 under pic_quart2 in workspace3."
-    ); // You can replace the alert with your desired completion message or action
+    showCustomAlert("customAlertOverlay1_3");
   }
 }
 
@@ -166,6 +175,7 @@ var workspace4 = Blockly.inject("cBlockDrop", {
     wheel: false,
   },
   trashcan: true,
+  theme: myTheme,
 });
 workspace4.addChangeListener(function (event) {
   // Check if the change is due to a block being moved or UI interaction
@@ -175,8 +185,7 @@ workspace4.addChangeListener(function (event) {
 
     // If there is at least one block, show completion alert
     if (blockCount > 0) {
-      console.log("win message show");
-      alert("Congratulations! You snapped a block onto workspace4.");
+      showCustomAlert("customAlertOverlay1_4");
     }
   }
 });
@@ -198,6 +207,7 @@ var workspace5 = Blockly.inject("cBlockDrop2", {
     wheel: false,
   },
   trashcan: true,
+  theme: myTheme,
 });
 workspace5.addChangeListener(function (event) {
   // Check if the change is due to a block being moved or UI interaction
@@ -214,9 +224,7 @@ workspace5.addChangeListener(function (event) {
         );
 
         if (run_codeBlock && run_codeBlock.type == "run_code") {
-          alert(
-            "Congratulations! You snapped a code_block block under the run_block block in workspace5."
-          );
+          showCustomAlert("customAlertOverlay1_5");
         }
       }
     }
@@ -243,6 +251,7 @@ var workspace6 = Blockly.inject("cBlockDrop3", {
     wheel: false,
   },
   trashcan: true,
+  theme: myTheme,
 });
 
 var cBlockDrop2Start = document.getElementById("cBlockDrop3Start");
@@ -298,7 +307,6 @@ workspace6.addChangeListener(function (event) {
 
 function checkCompletionW6() {
   if (runCodePresent && codeBlockMPresent && codeBlockPresent) {
-    alert("Congratulations! You arranged the blocks correctly in workspace 6.");
-    // You can replace the alert with your desired completion message or action
+    showCustomAlert("customAlertOverlay1_6");
   }
 }
