@@ -16,18 +16,12 @@
   <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
   <!-- Load a message file -->
   <script src="https://unpkg.com/blockly/msg/en.js"></script>
-  <!-- <script src="https://unpkg.com/blockly"></script> -->
   <script src="/KidsApp/js/myblocks.js" defer></script>
   <script src="/KidsApp/js/code1.js" defer></script>
   <script src="/KidsApp/js/common.js" defer></script>
 
   <title>Coding 1</title>
-  <style>
-    .workspace {
-      width: 900px;
-      height: 500px;
-    }
-  </style>
+
 </head>
 
 <body>
@@ -54,7 +48,7 @@
   </div>
   <div class="page" id="page2">
     <div class="background-container" id="color2"></div>
-    <h2>Drag and drop image block</h2>
+    <h2>Drag and Drop a Picture Block</h2>
     <div id="singleImage" class="workspace"></div>
     <xml id="singleImage_toolbox" style="display: none">
       <block type="pic_full"></block>
@@ -86,10 +80,22 @@
       <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
       <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
     </nav>
+    <div class="overlay" id="customAlertOverlay1_1">
+      <div class="alert-box">
+        <p>HOORAY You Dropped a Picture Block</p>
+        <button onclick="playClickSound(),closeCustomAlert('customAlertOverlay1_1')" id="rainbow-btn" class="pushable">
+          <span class="shadow"></span>
+          <span class="edge" id="rainbow-btn-edge"></span>
+          <span class="front" id="rainbow-btn-front">
+            CLOSE
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="page" id="page3">
     <div class="background-container" id="color3"></div>
-    <h2>Drag and drop and combine 2piece image blocks</h2>
+    <h2>Drag and Combine Two Picture Blocks</h2>
     <div id="halfImage" class="workspace"></div>
     <xml id="halfImage_toolbox" style="display: none">
       <block type="pic_half1"></block>
@@ -122,17 +128,27 @@
       <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
       <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
     </nav>
+    <div class="overlay" id="customAlertOverlay1_2">
+      <div class="alert-box">
+        <p>HOORAY You Combined Two Picture Blocks</p>
+        <button onclick="playClickSound(),closeCustomAlert('customAlertOverlay1_2')" id="rainbow-btn" class="pushable">
+          <span class="shadow"></span>
+          <span class="edge" id="rainbow-btn-edge"></span>
+          <span class="front" id="rainbow-btn-front">
+            CLOSE
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="page" id="page4">
     <div class="background-container" id="color4"></div>
-    <h2>Drag and drop and combine 3piece image blocks</h2>
+    <h2>Drag and Combine Three Picture blocks</h2>
     <div id="threeImage" class="workspace"></div>
     <xml id="threeImage_toolbox" style="display: none">
       <block type="pic_quart1"></block>
       <block type="pic_quart2"></block>
       <block type="pic_quart3"></block>
-      <block type="pic_full"></block>
-
     </xml>
     <br>
     <div>
@@ -161,10 +177,22 @@
       <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
       <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
     </nav>
+    <div class="overlay" id="customAlertOverlay1_3">
+      <div class="alert-box">
+        <p>HOORAY You Combined Three Picture blocks</p>
+        <button onclick="playClickSound(),closeCustomAlert('customAlertOverlay1_3')" id="rainbow-btn" class="pushable">
+          <span class="shadow"></span>
+          <span class="edge" id="rainbow-btn-edge"></span>
+          <span class="front" id="rainbow-btn-front">
+            CLOSE
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="page" id="page5">
     <div class="background-container" id="color5"></div>
-    <h2>Drag and drop a code block</h2>
+    <h2>Drag and Drop a Code Block</h2>
     <div id="cBlockDrop" class="workspace"></div>
     <xml id="cBlockDrop_toolbox" style="display: none">
       <block type="run_code"></block>
@@ -196,10 +224,22 @@
       <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
       <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
     </nav>
+    <div class="overlay" id="customAlertOverlay1_4">
+      <div class="alert-box">
+        <p>HOORAY You Dropped a Code Block</p>
+        <button onclick="playClickSound(),closeCustomAlert('customAlertOverlay1_4')" id="rainbow-btn" class="pushable">
+          <span class="shadow"></span>
+          <span class="edge" id="rainbow-btn-edge"></span>
+          <span class="front" id="rainbow-btn-front">
+            CLOSE
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="page" id="page6">
     <div class="background-container" id="color6"></div>
-    <h2>Drag and drop a code block under when run</h2>
+    <h2>Drag and Drop a Code Block Under The Run Block</h2>
     <div id="cBlockDrop2" class="workspace"></div>
     <xml id="cBlockDrop2_toolbox" style="display: none">
       <block type="code_block"></block>
@@ -234,20 +274,32 @@
       <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
       <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
     </nav>
+    <div class="overlay" id="customAlertOverlay1_5">
+      <div class="alert-box">
+        <p>HOORAY You Dropped a Code Block Under The Run Block</p>
+        <button onclick="playClickSound(),closeCustomAlert('customAlertOverlay1_5')" id="rainbow-btn" class="pushable">
+          <span class="shadow"></span>
+          <span class="edge" id="rainbow-btn-edge"></span>
+          <span class="front" id="rainbow-btn-front">
+            CLOSE
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="page" id="page7">
     <div class="background-container" id="color7"></div>
-    <h2>Drag and drop two code blocks under when run</h2>
+    <h2>Drag and Drop Two Code Blocks Under The Run Block</h2>
+    <div id="cBlockDrop3" class="workspace"></div>
+    <xml id="cBlockDrop3_toolbox" style="display: none">
+      <block type="code_blockM"></block>
+      <block type="code_block"></block>
+    </xml>
+    <xml id="cBlockDrop3Start" style="display: none">
+      <block type="run_code"></block>
+    </xml>
+    <br>
     <div>
-      <div id="cBlockDrop3" class="workspace"></div>
-      <xml id="cBlockDrop3_toolbox" style="display: none">
-        <block type="code_blockM"></block>
-        <block type="code_block"></block>
-      </xml>
-      <xml id="cBlockDrop3Start" style="display: none">
-        <block type="run_code"></block>
-      </xml>
-      <br>
       <button onclick="playClickSound(),changePage(6)" id="lavender-btn" class="pushable">
         <span class="shadow"></span>
         <span class="edge" id="lavender-btn-edge"></span>
@@ -263,16 +315,29 @@
         </span>
       </button>
     </div>
-    <nav class="breadcrumbs">
-      <a href="/index.html" class="breadcrumbs__item">Home</a>
-      <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
-      <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
-      <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
-      <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
-      <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
-      <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
-      <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
-    </nav>
+  </div>
+  <nav class="breadcrumbs">
+    <a href="/index.html" class="breadcrumbs__item">Home</a>
+    <a onclick="changePage(1)" class="breadcrumbs__item is-active">Introduction</a>
+    <a onclick="changePage(2)" class="breadcrumbs__item">1</a>
+    <a onclick="changePage(3)" class="breadcrumbs__item">2</a>
+    <a onclick="changePage(4)" class="breadcrumbs__item">3</a>
+    <a onclick="changePage(5)" class="breadcrumbs__item">4</a>
+    <a onclick="changePage(6)" class="breadcrumbs__item">5</a>
+    <a onclick="changePage(7)" class="breadcrumbs__item">6</a>
+  </nav>
+  <div class="overlay" id="customAlertOverlay1_6">
+    <div class="alert-box">
+      <p>HOORAY You Dropped Two Code Blocks Under The Run Block</p>
+      <button onclick="playClickSound(),closeCustomAlert('customAlertOverlay1_6')" id="rainbow-btn" class="pushable">
+        <span class="shadow"></span>
+        <span class="edge" id="rainbow-btn-edge"></span>
+        <span class="front" id="rainbow-btn-front">
+          CLOSE
+        </span>
+      </button>
+    </div>
+  </div>
   </div>
   <div class="page" id="page8">
     <div class="background-container" id="color8"></div>
