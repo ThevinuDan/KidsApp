@@ -137,7 +137,10 @@ button{
 #green-btn-front {
   background: hsl(150deg 100% 90%); /* Lightest shade of green */
 }
-
+#run-btn-front {
+  background: hsl(150, 79%, 69%); 
+  color: var(--baby-powder);
+}
 #blue-btn-edge {
   background: linear-gradient(
     to left,
