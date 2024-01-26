@@ -21,11 +21,9 @@ function changePage(page) {
 function goToChapter(chapter) {
   window.location.href = "/KidsApp/html/" + chapter + ".html";
 }
-
 function goToHome() {
   window.location.href = "/index.html";
 }
-
 // button click sound
 var clickSound = document.createElement("audio");
 clickSound.id = "clickSound";
@@ -106,4 +104,13 @@ function speakAllParagraphs(page) {
 
     console.log("Finished speaking");
   })();
+}
+
+function showCustomAlert(overlayId) {
+  document.getElementById(overlayId).style.display = "flex";
+  playVictorySound();
+}
+
+function closeCustomAlert(overlayId) {
+  document.getElementById(overlayId).style.display = "none";
 }
