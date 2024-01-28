@@ -161,7 +161,7 @@ Blockly.Blocks["up"] = {
     );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(200);
+    this.setColour("#9ec3ff");
     this.setTooltip("");
     this.setHelpUrl("");
   },
@@ -174,7 +174,7 @@ Blockly.Blocks["down"] = {
     );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(200);
+    this.setColour("#9ec3ff");
     this.setTooltip("");
     this.setHelpUrl("");
   },
@@ -187,7 +187,7 @@ Blockly.Blocks["right"] = {
     );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(200);
+    this.setColour("#9ec3ff");
     this.setTooltip("");
     this.setHelpUrl("");
   },
@@ -200,7 +200,7 @@ Blockly.Blocks["left"] = {
     );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(200);
+    this.setColour("#9ec3ff");
     this.setTooltip("");
     this.setHelpUrl("");
   },
