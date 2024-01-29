@@ -155,7 +155,7 @@ Blockly.Blocks["cake_step_4"] = {
 //The Move Blocks
 Blockly.Blocks["up"] = {
   init: function () {
-    this.appendDummyInput().appendField("Get Ingredients 🧈");
+    this.appendDummyInput().appendField("UP");
     this.appendDummyInput().appendField(
       new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" })
     );
@@ -168,7 +168,7 @@ Blockly.Blocks["up"] = {
 };
 Blockly.Blocks["down"] = {
   init: function () {
-    this.appendDummyInput().appendField("Mix 🥣");
+    this.appendDummyInput().appendField("DOWN");
     this.appendDummyInput().appendField(
       new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" })
     );
@@ -181,7 +181,7 @@ Blockly.Blocks["down"] = {
 };
 Blockly.Blocks["right"] = {
   init: function () {
-    this.appendDummyInput().appendField("Bake 🥘");
+    this.appendDummyInput().appendField("RIGHT");
     this.appendDummyInput().appendField(
       new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" })
     );
@@ -194,7 +194,7 @@ Blockly.Blocks["right"] = {
 };
 Blockly.Blocks["left"] = {
   init: function () {
-    this.appendDummyInput().appendField("Decorate 🧁");
+    this.appendDummyInput().appendField("LEFT");
     this.appendDummyInput().appendField(
       new Blockly.FieldImage("", 15, 15, { alt: "*", flipRtl: "FALSE" })
     );
