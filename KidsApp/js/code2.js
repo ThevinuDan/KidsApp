@@ -34,3 +34,26 @@ var workspace1 = Blockly.inject("bake_steps", {
 
 var bake_steps_start = document.getElementById("bake_steps_start");
 Blockly.Xml.domToWorkspace(bake_steps_start, workspace1);
+
+var workspace2 = Blockly.inject("chef_puzzle_1", {
+  toolbox: document.getElementById("chef_puzzle_1_toolbox"),
+  grid: {
+    spacing: 20,
+    length: 3,
+    colour: "#ccc",
+    snap: false,
+  },
+  move: {
+    scrollbars: {
+      horizontal: false,
+      vertical: false,
+    },
+    drag: false,
+    wheel: false,
+  },
+  trashcan: true,
+  theme: myTheme,
+});
+
+var chef_puzzle_1_start = document.getElementById("chef_puzzle_1_start");
+Blockly.Xml.domToWorkspace(chef_puzzle_1_start, workspace2);
